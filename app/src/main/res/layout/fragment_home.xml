@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".View.Fragment.HomeFragment">
+
+    <ImageView
+        android:src="@drawable/cow_thinking"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:padding="50dp"
+         />
+
+    <Button
+        android:id="@+id/startestimasi"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="80dp"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/blue"
+        android:textColor="@color/white"
+        android:layout_marginBottom="5dp"
+        android:text="Mulai Estimasi">
+    </Button>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="80dp"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/blue"
+        android:textColor="@color/white"
+        android:layout_marginBottom="5dp"
+        android:text="Panduan">
+    </Button>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="80dp"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/blue"
+        android:textColor="@color/white"
+        android:layout_marginBottom="5dp"
+        android:text="Perpustakaan">
+    </Button>
+</LinearLayout>

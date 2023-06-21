@@ -1,0 +1,140 @@
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    tools:openDrawer="start"
+    android:layout_height="match_parent"
+    tools:context=".View.Activity.MainActivity">
+
+
+
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/parentbar"
+            android:layout_width="match_parent"
+            android:backgroundTint="@color/blue"
+
+            app:elevation="0dp"
+            android:layout_height="70dp">
+
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/menu"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="15dp"
+                    android:layout_marginStart="0dp"
+                    android:src="@drawable/menu_icon3">
+                </ImageView>
+
+                <FrameLayout
+                    android:layout_marginStart="-5dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight=".90"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/apptitle"
+                        android:textSize="22sp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:text="Home"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </TextView>
+
+                    <EditText
+                        android:visibility="gone"
+                        android:id="@+id/searchedittext"
+                        android:maxLines="1"
+                        android:textSize="20sp"
+                        android:singleLine="true"
+                        android:backgroundTint="@color/white"
+                        android:textColor="@color/white"
+                        android:hint="Search"
+                        android:textColorHint="@color/white"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </EditText>
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_gravity="end"
+                    android:layout_width="0dp"
+                    android:layout_weight=".25"
+                    android:layout_marginEnd="20dp"
+                    android:layout_height="match_parent">
+<!--                    <ImageView-->
+<!--                        android:id="@+id/searchicon"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_marginEnd="-30dp"-->
+<!--                        android:paddingVertical="15dp"-->
+<!--                        android:src="@drawable/search">-->
+<!--                    </ImageView>-->
+
+<!--                    <ImageView-->
+<!--                        android:visibility="gone"-->
+<!--                        android:id="@+id/closesearch"-->
+<!--                        android:src="@drawable/close"-->
+<!--                        android:paddingVertical="19dp"-->
+<!--                        android:alpha="0.4"-->
+<!--                        android:layout_marginEnd="-30dp"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent">-->
+
+<!--                    </ImageView>-->
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView4"
+            android:layout_below="@+id/parentbar"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/navcomponent" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:background="@color/white"
+        app:itemTextColor="@color/black"
+        android:layout_width="220dp"
+        app:itemTextAppearance="@style/NavigationDrawerStyle"
+        app:itemIconSize="35dp"
+        app:itemIconPadding="20dp"
+        app:itemHorizontalPadding="20dp"
+        app:itemVerticalPadding="16dp"
+        app:itemIconTint="@color/black"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header_drawer"
+        app:menu="@menu/drawer_menu"
+        android:fitsSystemWindows="true"
+        />
+</androidx.drawerlayout.widget.DrawerLayout>
