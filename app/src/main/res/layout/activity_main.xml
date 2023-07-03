@@ -126,7 +126,7 @@
         app:itemTextColor="@color/black"
         android:layout_width="220dp"
         app:itemTextAppearance="@style/NavigationDrawerStyle"
-        app:itemIconSize="35dp"
+        app:itemIconSize="30dp"
         app:itemIconPadding="20dp"
         app:itemHorizontalPadding="20dp"
         app:itemVerticalPadding="16dp"

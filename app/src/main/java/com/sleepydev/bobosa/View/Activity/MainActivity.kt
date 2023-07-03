@@ -54,11 +54,10 @@ class MainActivity : AppCompatActivity() {
 
             //it's possible to do more actions on several items, if there is a large amount of items I prefer switch(){case} instead of if()
 
-
             //This is for maintaining the behavior of the Navigation view
             NavigationUI.onNavDestinationSelected(menuItem, navController)
+            drawer.closeDrawer(GravityCompat.START)
             //This is for closing the drawer after acting on it
-
             true
         })
 
