@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
     fun refreshTitle (){
         val navDest = navController.currentDestination?.id
         if (navDest==R.id.resultFragment){
-            mainBinding.apptitle.text = "Result"
+            mainBinding.apptitle.text = "Hasil"
         }
         if (navDest==R.id.homeFragment){
             mainBinding.apptitle.text = "Home"

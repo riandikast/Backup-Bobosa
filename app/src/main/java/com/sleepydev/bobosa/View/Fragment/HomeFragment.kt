@@ -85,39 +85,56 @@ class HomeFragment : Fragment() {
             }
             inputBinding.inputlingkardada.addTextChangedListener(textWatcher)
             inputBinding.inputpanjangbadan.addTextChangedListener(textWatcher)
-            val jenis = listOf("Bali", "Aceh", "Bandung", "Other")
+            val jenis = listOf( "Peranakan Ongole (PO)", "Bali Jantan", "Bali Betina")
             val adapter = ArrayAdapter(requireActivity(), R.layout.list_jenis, jenis)
             inputBinding.jenisoption.setAdapter(adapter)
             inputBinding.jenisoption.onItemClickListener = AdapterView.OnItemClickListener {
                     adapterView, view, i, l ->
-                val selected = adapterView.getItemAtPosition(i)
+                var selected = adapterView.getItemAtPosition(i)
                 inputBinding.textFieldJenis.hint = ""
 //                Toast.makeText(requireContext(), "$selected", Toast.LENGTH_SHORT).show()
             }
             inputBinding.btnhitung.setOnClickListener {
+                val bundle = Bundle()
                 val ld = inputBinding.inputlingkardada.text.toString()
                 val pb = inputBinding.inputpanjangbadan.text.toString()
-                val bundle = Bundle()
+                val jenis = inputBinding.jenisoption.text.toString()
+
+
                 val ldData = inputBinding.inputlingkardada.text.toString().trim()
                 val pbData = inputBinding.inputpanjangbadan.text.toString().trim()
-                Toast.makeText(requireContext(), "$ldData", Toast.LENGTH_SHORT).show()
+
+
                 if (ldData.isEmpty() ){
                     inputBinding.inputlingkardada.error = "Harus Dilengkapi"
-                }else{
-
-                    a.dismiss()
-                    findNavController().navigate(R.id.resultFragment, bundle)
-
+                }
+                if (pbData.isEmpty() ){
+                    inputBinding.inputpanjangbadan.error = "Harus Dilengkapi"
                 }
 
-                bundle.putString("ld", ld)
-                bundle.putString("pb", pb)
+                if (ldData.isNotEmpty() && pbData.isNotEmpty()){
+                    bundle.putString("ld", ld)
+                    bundle.putString("pb", pb)
+                    bundle.putString("sel", jenis)
+                    a.dismiss()
+                    findNavController().navigate(R.id.resultFragment, bundle)
+                }
+
+
+
+
 
 
 
             }
             a.show()
 
+        }
+        binding.perpustakaan.setOnClickListener {
+            findNavController().navigate(R.id.libFragment)
+        }
+        binding.panduan.setOnClickListener {
+            findNavController().navigate(R.id.panduanFragment)
         }
         return view
     }

@@ -22,9 +22,23 @@
         <action
             android:id="@+id/action_homeFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_libFragment"
+            app:destination="@id/libFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_panduanFragment"
+            app:destination="@id/panduanFragment" />
     </fragment>
     <fragment
         android:id="@+id/resultFragment"
         android:name="com.sleepydev.bobosa.View.Fragment.ResultFragment"
         android:label="ResultFragment" />
+    <fragment
+        android:id="@+id/libFragment"
+        android:name="com.sleepydev.bobosa.View.Fragment.LibFragment"
+        android:label="LibFragment" />
+    <fragment
+        android:id="@+id/panduanFragment"
+        android:name="com.sleepydev.bobosa.View.Fragment.PanduanFragment"
+        android:label="PanduanFragment" />
 </navigation>

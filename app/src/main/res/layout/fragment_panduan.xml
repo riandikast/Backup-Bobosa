@@ -5,28 +5,31 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+
     android:background="@color/blue"
     tools:context=".View.Fragment.HomeFragment">
 
     <androidx.core.widget.NestedScrollView
-        android:layout_marginBottom="50dp"
         android:layout_width="match_parent"
 
         android:layout_height="match_parent">
 
         <LinearLayout
             android:orientation="vertical"
+            android:layout_marginBottom="50dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <ImageView
-                android:src="@drawable/lib"
+                android:src="@drawable/userm"
+                android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
-                android:layout_height="240dp"
-                android:padding="50dp"
+                android:layout_height="180dp"
+                android:padding="20dp"
                 />
 
             <LinearLayout
+
                 android:orientation="vertical"
                 android:background="@color/blue"
                 android:layout_width="match_parent"
@@ -44,43 +47,40 @@
                     android:textColor="@color/white"
                     android:gravity="center_horizontal"
                     android:textSize="25sp"
+                    android:layout_marginTop="-20dp"
                     android:layout_marginHorizontal="50dp"
                     android:layout_width="wrap_content"
                     android:layout_marginBottom="20dp"
-                    android:text="Rumus Menghitung Bobot Sapi Hidup"
+                    android:text="Panduan Mengukur Ukuran Tubuh Sapi"
                     android:layout_height="wrap_content">
                 </TextView>
 
-                <HorizontalScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
 
                     <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_marginStart="50dp"
+                        android:layout_marginHorizontal="50dp"
+                        android:orientation="vertical"
+                       android:gravity="center"
                         android:layout_marginVertical="20dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                         <LinearLayout
                             android:orientation="vertical"
-
                             android:layout_marginHorizontal="20dp"
+                            android:layout_marginTop="15dp"
                             android:layout_width="300dp"
                             android:layout_height="wrap_content">
 
                             <com.google.android.material.card.MaterialCardView
                                 android:layout_width="match_parent"
-                                app:strokeColor="@color/white"
-                                app:strokeWidth="2dp"
+
                                 android:backgroundTint="@color/blue"
                                 app:cardCornerRadius="10dp"
 
                                 android:layout_marginVertical="10dp"
-                                android:layout_height="280dp">
+                                android:layout_height="wrap_content">
 
                                 <RelativeLayout
-                                    android:layout_marginTop="10dp"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent">
                                     <LinearLayout
@@ -89,24 +89,24 @@
                                         android:layout_height="match_parent">
 
                                         <ImageView
-                                            android:src="@drawable/newbook"
+
+                                            android:src="@drawable/cowld"
                                             android:layout_width="match_parent"
-                                            android:layout_height="170dp"
+                                            android:layout_height="225dp"
                                             android:layout_marginVertical="10dp"
-                                            android:padding="20dp"
+                                            android:padding="1dp"
                                             />
 
                                         <TextView
                                             android:textColor="@color/white"
                                             android:textSize="20sp"
-                                            android:layout_marginTop="5dp"
+                                            android:layout_marginTop="0dp"
                                             android:layout_gravity="center_horizontal"
                                             android:layout_width="wrap_content"
-                                            android:text="Rumus Schoorl Denmark  "
+                                            android:text="Mengukur Lingkar Dada"
+                                            android:layout_marginBottom="10dp"
                                             android:layout_height="wrap_content">
                                         </TextView>
-
-
 
 
                                     </LinearLayout>
@@ -116,15 +116,17 @@
                                 </RelativeLayout>
 
 
+
+
                             </com.google.android.material.card.MaterialCardView>
 
                             <com.google.android.material.card.MaterialCardView
                                 android:layout_width="match_parent"
-                                android:layout_marginTop="-40dp"
-                                android:id="@+id/lihatSDenmark"
+                                android:layout_marginTop="-15dp"
+                                android:id="@+id/lihatLD"
                                 android:translationZ="100dp"
                                 app:strokeColor="@color/white"
-                                app:strokeWidth="2dp"
+                                app:strokeWidth="1dp"
 
                                 android:background="@drawable/shadow_background"
                                 android:layout_marginHorizontal="60dp"
@@ -142,6 +144,7 @@
                                     <ImageView
                                         android:src="@drawable/opened_book"
                                         android:layout_width="60dp"
+
                                         android:layout_height="match_parent"
                                         android:padding="7dp"
                                         />
@@ -149,7 +152,7 @@
                                     <TextView
                                         android:layout_gravity="center_vertical"
                                         android:textColor="@color/white"
-                                        android:text="Lihat Rumus"
+                                        android:text="Lihat Panduan"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content">
 
@@ -162,20 +165,20 @@
                         <LinearLayout
                             android:orientation="vertical"
                             android:layout_marginHorizontal="20dp"
+                            android:layout_marginTop="15dp"
                             android:layout_width="300dp"
                             android:layout_height="wrap_content">
 
                             <com.google.android.material.card.MaterialCardView
                                 android:layout_width="match_parent"
+
                                 android:backgroundTint="@color/blue"
-                                app:strokeWidth="2dp"
-                                app:strokeColor="@color/white"
                                 app:cardCornerRadius="10dp"
+
                                 android:layout_marginVertical="10dp"
-                                android:layout_height="280dp">
+                                android:layout_height="wrap_content">
 
                                 <RelativeLayout
-                                    android:layout_marginTop="10dp"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent">
                                     <LinearLayout
@@ -185,20 +188,21 @@
 
                                         <ImageView
 
-                                            android:src="@drawable/newbook"
+                                            android:src="@drawable/cowpb"
                                             android:layout_width="match_parent"
-                                            android:layout_height="170dp"
+                                            android:layout_height="210dp"
                                             android:layout_marginVertical="10dp"
-                                            android:padding="20dp"
+                                            android:padding="1dp"
                                             />
 
                                         <TextView
                                             android:textColor="@color/white"
                                             android:textSize="20sp"
-                                            android:layout_marginTop="5dp"
+                                            android:layout_marginTop="10dp"
                                             android:layout_gravity="center_horizontal"
                                             android:layout_width="wrap_content"
-                                            android:text="Rumus Schoorl Indonesia  "
+                                            android:layout_marginBottom="10dp"
+                                            android:text="Mengukur Panjang Badan"
                                             android:layout_height="wrap_content">
                                         </TextView>
 
@@ -218,11 +222,12 @@
 
                             <com.google.android.material.card.MaterialCardView
                                 android:layout_width="match_parent"
-                                android:layout_marginTop="-40dp"
-                                android:id="@+id/lihatSID"
+                                android:layout_marginTop="-15dp"
+                                android:id="@+id/lihatPB"
                                 android:translationZ="100dp"
                                 app:strokeColor="@color/white"
-                                app:strokeWidth="2dp"
+                                app:strokeWidth="1dp"
+
                                 android:background="@drawable/shadow_background"
                                 android:layout_marginHorizontal="60dp"
                                 app:cardCornerRadius="15dp"
@@ -247,7 +252,7 @@
                                     <TextView
                                         android:layout_gravity="center_vertical"
                                         android:textColor="@color/white"
-                                        android:text="Lihat Rumus"
+                                        android:text="Lihat Panduan"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content">
 
@@ -260,43 +265,44 @@
                         <LinearLayout
                             android:orientation="vertical"
                             android:layout_marginHorizontal="20dp"
+                            android:layout_marginTop="15dp"
                             android:layout_width="300dp"
                             android:layout_height="wrap_content">
 
                             <com.google.android.material.card.MaterialCardView
                                 android:layout_width="match_parent"
+
                                 android:backgroundTint="@color/blue"
-                                app:strokeColor="@color/white"
-                                app:strokeWidth="2dp"
                                 app:cardCornerRadius="10dp"
+
                                 android:layout_marginVertical="10dp"
-                                android:layout_height="280dp">
+                                android:layout_height="wrap_content">
 
                                 <RelativeLayout
-                                    android:layout_marginTop="10dp"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent">
-
                                     <LinearLayout
                                         android:orientation="vertical"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent">
 
                                         <ImageView
-                                            android:src="@drawable/newbook"
+
+                                            android:src="@drawable/cowhg"
                                             android:layout_width="match_parent"
-                                            android:layout_height="170dp"
+                                            android:layout_height="210dp"
                                             android:layout_marginVertical="10dp"
-                                            android:padding="20dp"
+                                            android:padding="1dp"
                                             />
 
                                         <TextView
                                             android:textColor="@color/white"
                                             android:textSize="20sp"
-                                            android:layout_marginTop="5dp"
+                                            android:layout_marginTop="10dp"
                                             android:layout_gravity="center_horizontal"
                                             android:layout_width="wrap_content"
-                                            android:text="Rumus Winter Eropa "
+                                            android:text="Mengukur Tinggi Badan"
+                                            android:layout_marginBottom="10dp"
                                             android:layout_height="wrap_content">
                                         </TextView>
 
@@ -316,212 +322,12 @@
 
                             <com.google.android.material.card.MaterialCardView
                                 android:layout_width="match_parent"
-                                android:id="@+id/lihatWEurope"
-                                android:layout_marginTop="-40dp"
+                                android:layout_marginTop="-15dp"
+                                android:id="@+id/lihatTB"
                                 android:translationZ="100dp"
                                 app:strokeColor="@color/white"
-                                app:strokeWidth="2dp"
+                                app:strokeWidth="1dp"
 
-                                android:background="@drawable/shadow_background"
-                                android:layout_marginHorizontal="60dp"
-                                app:cardCornerRadius="15dp"
-                                android:layout_height="50dp">
-
-                                <LinearLayout
-                                    android:background="@color/blue"
-                                    android:layout_alignParentBottom="true"
-                                    android:gravity="center_horizontal"
-                                    android:orientation="horizontal"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="50dp">
-
-                                    <ImageView
-                                        android:src="@drawable/opened_book"
-                                        android:layout_width="60dp"
-                                        android:layout_height="match_parent"
-                                        android:padding="7dp"
-                                        />
-
-                                    <TextView
-                                        android:layout_gravity="center_vertical"
-                                        android:textColor="@color/white"
-                                        android:text="Lihat Rumus"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content">
-
-                                    </TextView>
-                                </LinearLayout>
-                            </com.google.android.material.card.MaterialCardView>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_marginHorizontal="20dp"
-                            android:layout_width="300dp"
-                            android:layout_height="wrap_content">
-
-                            <com.google.android.material.card.MaterialCardView
-                                android:layout_width="match_parent"
-                                app:strokeColor="@color/white"
-                                app:strokeWidth="2dp"
-                                android:backgroundTint="@color/blue"
-                                app:cardCornerRadius="10dp"
-
-                                android:layout_marginVertical="10dp"
-                                android:layout_height="280dp">
-
-                                <RelativeLayout
-                                    android:layout_marginTop="10dp"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent">
-                                    <LinearLayout
-                                        android:orientation="vertical"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent">
-
-                                        <ImageView
-
-                                            android:src="@drawable/newbook"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="170dp"
-                                            android:layout_marginVertical="10dp"
-                                            android:padding="20dp"
-                                            />
-
-                                        <TextView
-                                            android:textColor="@color/white"
-                                            android:textSize="20sp"
-                                            android:layout_marginTop="5dp"
-                                            android:layout_gravity="center_horizontal"
-                                            android:layout_width="wrap_content"
-                                            android:text="Rumus Winter Indonesia "
-                                            android:layout_height="wrap_content">
-                                        </TextView>
-
-
-
-
-                                    </LinearLayout>
-
-
-
-                                </RelativeLayout>
-
-
-
-
-                            </com.google.android.material.card.MaterialCardView>
-
-                            <com.google.android.material.card.MaterialCardView
-                                android:id="@+id/lihatWID"
-                                android:layout_width="match_parent"
-                                android:layout_marginTop="-40dp"
-                                android:translationZ="100dp"
-                                app:strokeColor="@color/white"
-                                app:strokeWidth="2dp"
-
-                                android:background="@drawable/shadow_background"
-                                android:layout_marginHorizontal="60dp"
-                                app:cardCornerRadius="15dp"
-                                android:layout_height="50dp">
-
-                                <LinearLayout
-                                    android:background="@color/blue"
-                                    android:layout_alignParentBottom="true"
-                                    android:gravity="center_horizontal"
-                                    android:orientation="horizontal"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="50dp">
-
-                                    <ImageView
-                                        android:src="@drawable/opened_book"
-                                        android:layout_width="60dp"
-                                        android:layout_height="match_parent"
-                                        android:padding="7dp"
-                                        />
-
-                                    <TextView
-                                        android:layout_gravity="center_vertical"
-                                        android:textColor="@color/white"
-                                        android:text="Lihat Rumus"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content">
-
-                                    </TextView>
-                                </LinearLayout>
-                            </com.google.android.material.card.MaterialCardView>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:orientation="vertical"
-
-                            android:layout_marginStart="20dp"
-                            android:layout_marginEnd="100dp"
-                            android:layout_width="300dp"
-                            android:layout_height="wrap_content">
-
-                            <com.google.android.material.card.MaterialCardView
-                                android:layout_width="match_parent"
-                                app:strokeColor="@color/white"
-                                app:strokeWidth="2dp"
-                                android:backgroundTint="@color/blue"
-                                app:cardCornerRadius="10dp"
-
-                                android:layout_marginVertical="10dp"
-                                android:layout_height="280dp">
-
-                                <RelativeLayout
-                                    android:layout_marginTop="10dp"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent">
-
-                                    <LinearLayout
-                                        android:orientation="vertical"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent">
-
-                                        <ImageView
-
-                                            android:src="@drawable/newbook"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="170dp"
-                                            android:layout_marginVertical="10dp"
-                                            android:padding="20dp"
-                                            />
-
-                                        <TextView
-                                            android:textColor="@color/white"
-                                            android:textSize="20sp"
-                                            android:layout_marginTop="5dp"
-                                            android:layout_gravity="center_horizontal"
-                                            android:layout_width="wrap_content"
-                                            android:text="Rumus Arjodarmoko "
-                                            android:layout_height="wrap_content">
-                                        </TextView>
-
-
-
-
-                                    </LinearLayout>
-
-
-
-                                </RelativeLayout>
-
-
-
-
-                            </com.google.android.material.card.MaterialCardView>
-
-                            <com.google.android.material.card.MaterialCardView
-                                android:layout_width="match_parent"
-                                android:id="@+id/lihatArjo"
-                                android:layout_marginTop="-40dp"
-                                android:translationZ="100dp"
-                                app:strokeColor="@color/white"
-                                app:strokeWidth="2dp"
                                 android:background="@drawable/shadow_background"
                                 android:layout_marginHorizontal="60dp"
                                 app:cardCornerRadius="15dp"
@@ -546,7 +352,7 @@
                                     <TextView
                                         android:layout_gravity="center_vertical"
                                         android:textColor="@color/white"
-                                        android:text="Lihat Rumus"
+                                        android:text="Lihat Panduan"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content">
 
@@ -555,6 +361,8 @@
                             </com.google.android.material.card.MaterialCardView>
 
                         </LinearLayout>
+
+
 
                     </LinearLayout>
 
@@ -562,14 +370,15 @@
 
 
 
-                </HorizontalScrollView>
+
 
 
 
 
             </LinearLayout>
 
-        </LinearLayout>
+            </LinearLayout>
+
     </androidx.core.widget.NestedScrollView>
 
 
