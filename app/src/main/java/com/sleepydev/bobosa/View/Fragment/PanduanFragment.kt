@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import com.sleepydev.bobosa.R
+import com.sleepydev.bobosa.View.Activity.MainActivity
 import com.sleepydev.bobosa.databinding.FragmentLibBinding
 import com.sleepydev.bobosa.databinding.FragmentPanduanBinding
 import com.sleepydev.bobosa.databinding.PanduanDialogBinding
@@ -31,8 +32,7 @@ class PanduanFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding =  FragmentPanduanBinding.inflate(inflater, container, false)
         val view = binding.root
-        val apptitle = activity?.findViewById<TextView>(R.id.apptitle)
-        apptitle?.text = "Panduan"
+        (activity as MainActivity).refreshTitle()
         binding.lihatLD.setOnClickListener {
             val inputBinding = PanduanDialogBinding.inflate(inflater, container, false)
             val inputView = inputBinding.root

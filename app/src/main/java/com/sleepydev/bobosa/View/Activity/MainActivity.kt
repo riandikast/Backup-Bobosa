@@ -1,22 +1,29 @@
 package com.sleepydev.bobosa.View.Activity
 
+import android.graphics.Color
+import android.graphics.PorterDuff
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
+import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.lifecycle.asLiveData
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
+import com.sleepydev.bobosa.Datastore.StateManager
 import com.sleepydev.bobosa.R
 import com.sleepydev.bobosa.databinding.ActivityMainBinding
 import com.sleepydev.bobosa.databinding.FragmentHomeBinding
 import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 
 
@@ -42,13 +49,30 @@ class MainActivity : AppCompatActivity() {
         ) as NavHostFragment
 
         navController = navHostFragment.navController
-
+        mainBinding.apptitle.setOnClickListener {
+            navController.navigate(R.id.homeFragment)
+        }
         menu.setOnClickListener {
             drawer.openDrawer(GravityCompat.START)
+            val dataManager = StateManager(this)
+            dataManager.tempState.asLiveData().observe(this) {
+
+                if (it){
+                    mainBinding.navView.backgroundTintList = ContextCompat.getColorStateList(this@MainActivity,R.color.darkgrey)
+                    mainBinding.navView.itemTextColor =  ContextCompat.getColorStateList(this@MainActivity,R.color.white)
+
+                }else{
+                    mainBinding.navView.backgroundTintList = ContextCompat.getColorStateList(this@MainActivity,R.color.white)
+                    mainBinding.navView.itemTextColor =  ContextCompat.getColorStateList(this@MainActivity,R.color.black)
+                }
+
+
+            }
 
         }
         navView.itemIconTintList = null
         navView.setupWithNavController(navController)
+        drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
         navView.setNavigationItemSelectedListener(NavigationView.OnNavigationItemSelectedListener { menuItem ->
             val id = menuItem.itemId
 
@@ -62,6 +86,8 @@ class MainActivity : AppCompatActivity() {
         })
 
 
+
+
     }
     fun refreshTitle (){
         val navDest = navController.currentDestination?.id
@@ -71,5 +97,34 @@ class MainActivity : AppCompatActivity() {
         if (navDest==R.id.homeFragment){
             mainBinding.apptitle.text = "Home"
         }
+
+        if (navDest==R.id.historyFragment){
+            mainBinding.apptitle.text = "Riwayat"
+        }
+
+        if (navDest==R.id.panduanFragment){
+            mainBinding.apptitle.text = "Panduan"
+        }
+        if (navDest==R.id.libFragment){
+            mainBinding.apptitle.text = "Perpustakaan"
+        }
+
+        if (navDest==R.id.accuracyFragment){
+            mainBinding.apptitle.text = "Akurasi"
+        }
+
+        if (navDest==R.id.batchFragment){
+            mainBinding.apptitle.text = "Batch"
+        }
+
+        if (navDest==R.id.aboutFragment){
+            mainBinding.apptitle.text = "About"
+        }
+
+        if (navDest==R.id.optionFragment){
+            mainBinding.apptitle.text = "Option"
+        }
+
+
     }
 }

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:id="@+id/parentHome"
+    android:background="@color/design_default_color_on_primary"
     tools:context=".View.Fragment.HomeFragment">
 
     <androidx.core.widget.NestedScrollView
@@ -158,18 +160,20 @@
 
 
             <TextView
+                android:id="@+id/lainya_text"
                 android:textColor="@color/blue"
                 android:layout_marginTop="25dp"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_marginHorizontal="60dp"
-                android:text="Lainya"
+                android:text="Lainnya"
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
             </TextView>
 
             <HorizontalScrollView
+                android:scrollbars="none"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <LinearLayout
@@ -178,7 +182,7 @@
                     android:layout_height="wrap_content">
 
                     <androidx.cardview.widget.CardView
-
+                        android:id="@+id/card_history"
                         android:layout_marginVertical="12dp"
                         android:layout_width="220dp"
                         android:backgroundTint="@color/blue"
@@ -223,7 +227,7 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-
+                        android:id="@+id/card_akurasi"
                         android:layout_marginVertical="12dp"
                         android:layout_width="220dp"
                         android:backgroundTint="@color/blue"
@@ -267,7 +271,7 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-
+                        android:id="@+id/card_batch"
                         android:layout_marginVertical="12dp"
                         android:layout_width="220dp"
                         android:backgroundTint="@color/blue"

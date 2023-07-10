@@ -1,5 +1,6 @@
 package com.sleepydev.bobosa.View.Fragment
 
+import android.graphics.Color
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -13,11 +14,14 @@ import android.widget.ArrayAdapter
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat
+import androidx.lifecycle.asLiveData
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.tabs.TabLayout
+import com.sleepydev.bobosa.Datastore.StateManager
 import com.sleepydev.bobosa.R
 import com.sleepydev.bobosa.View.Activity.MainActivity
 import com.sleepydev.bobosa.databinding.FragmentHomeBinding
@@ -46,9 +50,19 @@ class HomeFragment : Fragment() {
         val navbar = activity?.findViewById<AppBarLayout>(R.id.parentbar)
         navbar?.visibility = View.VISIBLE
         (activity as MainActivity).refreshTitle()
-
+        val dataManager = StateManager(requireContext())
+        dataManager.tempState.asLiveData().observe(requireActivity()) {
+            if (it){
+                binding.parentHome.setBackgroundColor(Color.parseColor("#262626"))
+                binding.lainyaText.setTextColor(Color.parseColor("#ffffff"));
+            }else{
+                binding.parentHome.setBackgroundColor(Color.parseColor("#ffffff"))
+                binding.lainyaText.setTextColor(Color.parseColor("#0a6165"));
+            }
+        }
 
         binding.startestimasi.setOnClickListener {
+
             val inputBinding = InputDialogBinding.inflate(inflater, container, false)
             val inputView = inputBinding.root
             val a = AlertDialog.Builder(requireContext())
@@ -85,6 +99,7 @@ class HomeFragment : Fragment() {
             }
             inputBinding.inputlingkardada.addTextChangedListener(textWatcher)
             inputBinding.inputpanjangbadan.addTextChangedListener(textWatcher)
+
             val jenis = listOf( "Peranakan Ongole (PO)", "Bali Jantan", "Bali Betina")
             val adapter = ArrayAdapter(requireActivity(), R.layout.list_jenis, jenis)
             inputBinding.jenisoption.setAdapter(adapter)
@@ -94,6 +109,7 @@ class HomeFragment : Fragment() {
                 inputBinding.textFieldJenis.hint = ""
 //                Toast.makeText(requireContext(), "$selected", Toast.LENGTH_SHORT).show()
             }
+
             inputBinding.btnhitung.setOnClickListener {
                 val bundle = Bundle()
                 val ld = inputBinding.inputlingkardada.text.toString()
@@ -121,21 +137,30 @@ class HomeFragment : Fragment() {
                 }
 
 
-
-
-
-
-
             }
             a.show()
 
         }
+
         binding.perpustakaan.setOnClickListener {
             findNavController().navigate(R.id.libFragment)
         }
         binding.panduan.setOnClickListener {
             findNavController().navigate(R.id.panduanFragment)
         }
+
+        binding.cardHistory.setOnClickListener {
+            findNavController().navigate(R.id.historyFragment)
+        }
+        binding.cardAkurasi.setOnClickListener {
+            findNavController().navigate(R.id.accuracyFragment)
+        }
+
+        binding.cardBatch.setOnClickListener {
+            findNavController().navigate(R.id.batchFragment)
+        }
+
+
         return view
     }
 

@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_dialog2"
+    android:minWidth="800dp"
+    android:minHeight="460dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+
+        android:background="@drawable/rounded_dialog2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/btninputnote"
+            android:layout_alignParentEnd="true"
+            android:paddingVertical="12dp"
+            android:layout_marginEnd="-20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/btnclose"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/close"
+            android:paddingVertical="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="-20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@color/blue"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+
+                android:textColor="@color/white"
+                android:text="Data pengukuran"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <RelativeLayout
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/lingkardadatext"
+                    android:textColor="@color/white"
+                    android:text="Lingkar Dada"
+                    android:textSize="18sp"
+                    android:layout_marginStart="30dp"
+                    android:layout_gravity="start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/datalingkardada"
+                    android:textColor="@color/white"
+                    android:text="18cm"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/panjangbadantext"
+                    android:textColor="@color/white"
+                    android:text="Panjang Badan"
+                    android:textSize="18sp"
+                    android:layout_marginStart="30dp"
+                    android:layout_gravity="start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/datapanjangbadan"
+                    android:textColor="@color/white"
+                    android:text="20cm"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/jenissapitext"
+                    android:textColor="@color/white"
+                    android:text="Jenis Sapi"
+                    android:textSize="18sp"
+                    android:layout_marginStart="30dp"
+                    android:layout_gravity="start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/jenissapi"
+                    android:textColor="@color/white"
+                    android:text="-"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+            </RelativeLayout>
+
+
+            <View
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@color/white"/>
+
+            <TextView
+                android:textColor="@color/white"
+                android:text="Hasil Estimasi"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <RelativeLayout
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/schoorltitle"
+                    android:textColor="@color/white"
+                    android:text="Schoorl Denmark"
+                    android:textSize="18sp"
+                    android:layout_marginStart="30dp"
+                    android:layout_gravity="start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/starsdenm"
+                    android:visibility="invisible"
+                    android:src="@drawable/star"
+                    android:layout_toEndOf="@+id/schoorltitle"
+                    android:layout_width="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_height="20dp">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/schoorlvalue"
+                    android:textColor="@color/white"
+                    android:text="0 Kg"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/schoorlIDtitle"
+                    android:textColor="@color/white"
+                    android:text="Schoorl Indonesia"
+                    android:textSize="18sp"
+                    android:layout_marginStart="30dp"
+                    android:layout_gravity="start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/starsind"
+                    android:visibility="invisible"
+                    android:src="@drawable/star"
+                    android:layout_toEndOf="@+id/schoorlIDtitle"
+                    android:layout_width="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_height="20dp">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/schoorlIDvalue"
+                    android:textColor="@color/white"
+                    android:text="0 Kg"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/wintertitle"
+                    android:textColor="@color/white"
+                    android:text="Winter Eropa"
+                    android:textSize="18sp"
+                    android:layout_marginStart="30dp"
+                    android:layout_gravity="start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <ImageView
+                    android:id="@+id/starwerop"
+                    android:visibility="invisible"
+                    android:src="@drawable/star"
+                    android:layout_toEndOf="@+id/wintertitle"
+                    android:layout_width="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_height="20dp">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/wintervalue"
+                    android:textColor="@color/white"
+                    android:text="0 Kg"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/winterIDtitle"
+                    android:textColor="@color/white"
+                    android:text="Winter Indonesia"
+                    android:textSize="18sp"
+                    android:layout_marginStart="30dp"
+                    android:layout_gravity="start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <ImageView
+                    android:id="@+id/starswid"
+                    android:visibility="invisible"
+                    android:src="@drawable/star"
+                    android:layout_toEndOf="@+id/winterIDtitle"
+                    android:layout_width="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_height="20dp">
+
+                </ImageView>
+                <TextView
+                    android:id="@+id/winterIDvalue"
+                    android:textColor="@color/white"
+                    android:text="0 Kg"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/lambournetitle"
+                    android:textColor="@color/white"
+                    android:text="Arjodarmoko"
+                    android:textSize="18sp"
+                    android:layout_marginStart="30dp"
+                    android:layout_gravity="start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <ImageView
+                    android:id="@+id/starsarjo"
+                    android:visibility="invisible"
+                    android:src="@drawable/star"
+                    android:layout_toEndOf="@+id/lambournetitle"
+                    android:layout_width="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_height="20dp">
+
+                </ImageView>
+                <TextView
+                    android:id="@+id/lambournevalue"
+                    android:textColor="@color/white"
+                    android:text="0 Kg"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@color/white"/>
+
+
+
+            <TextView
+                android:textColor="@color/white"
+                android:text="Rekomendasi"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/rekomenval"
+                    android:textColor="@color/white"
+                    android:gravity="center_horizontal"
+                    android:layout_marginHorizontal="20dp"
+                    android:text="Untuk Sapi Jenis X disarankan menggunakan hasil dari rumus y"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -41,7 +41,7 @@ class SplashFragment : Fragment() {
                         true
                     ).build())
 
-        }, 2500)
+        }, 2000)
         return view
     }
 

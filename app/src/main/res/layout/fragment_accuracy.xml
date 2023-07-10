@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+    android:background="@color/blue"
+    tools:context=".View.Fragment.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginBottom="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="Ukuran Sapi"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <EditText
+                android:id="@+id/inputlingkardada"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="number"
+                android:maxLength="3"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rectangle_white_edit_text"
+                android:hint="Lingkar Dada ( Cm )"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:padding="10dp">
+            </EditText>
+
+            <EditText
+                android:id="@+id/inputpanjangbadan"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:maxLength="3"
+                android:inputType="number"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:textColorHint="@color/white"
+                android:background="@drawable/rectangle_white_edit_text"
+                android:hint="Panjang Badan ( Cm )"
+
+                android:textColor="@color/white"
+                android:padding="10dp">
+            </EditText>
+
+            <TextView
+                android:text="Bobot Badan Aktual"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_marginTop="40dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/inputbobotaktual"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:maxLength="4"
+                android:inputType="number"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:textColorHint="@color/white"
+                android:background="@drawable/rectangle_white_edit_text"
+                android:hint="Bobot badan ( Kg )"
+
+                android:textColor="@color/white"
+                android:padding="10dp">
+            </EditText>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:backgroundTint="@color/blue"
+                app:strokeColor="@color/white"
+                app:strokeWidth="1dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="40dp"
+                android:layout_height="wrap_content">
+
+                <Button
+
+                    android:id="@+id/btnhitung"
+                    android:backgroundTint="@color/blue"
+                    android:textColor="@color/white"
+                    android:text="Hitung"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                </Button>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:text="Persentase Penyimpangan"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="40dp"
+                    android:background="@color/white"/>
+
+                <RelativeLayout
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/schoorltitle"
+                        android:textColor="@color/white"
+                        android:text="Schoorl Denmark"
+                        android:textSize="20sp"
+                        android:layout_marginStart="30dp"
+                        android:layout_gravity="start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/starsdenm"
+                        android:visibility="invisible"
+                        android:src="@drawable/star"
+                        android:layout_toEndOf="@+id/schoorltitle"
+                        android:layout_width="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_height="20dp">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/schoorlvalue"
+                        android:textColor="@color/white"
+                        android:text="0%"
+                        android:textSize="20sp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/schoorlIDtitle"
+                        android:textColor="@color/white"
+                        android:text="Schoorl Indonesia"
+                        android:textSize="20sp"
+                        android:layout_marginStart="30dp"
+                        android:layout_gravity="start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/starsind"
+                        android:visibility="invisible"
+                        android:src="@drawable/star"
+                        android:layout_toEndOf="@+id/schoorlIDtitle"
+                        android:layout_width="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_height="20dp">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/schoorlIDvalue"
+                        android:textColor="@color/white"
+                        android:text="0%"
+                        android:textSize="20sp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/wintertitle"
+                        android:textColor="@color/white"
+                        android:text="Winter Eropa"
+                        android:textSize="20sp"
+                        android:layout_marginStart="30dp"
+                        android:layout_gravity="start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                    <ImageView
+                        android:id="@+id/starwerop"
+                        android:visibility="invisible"
+                        android:src="@drawable/star"
+                        android:layout_toEndOf="@+id/wintertitle"
+                        android:layout_width="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_height="20dp">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/wintervalue"
+                        android:textColor="@color/white"
+                        android:text="0%"
+                        android:textSize="20sp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/winterIDtitle"
+                        android:textColor="@color/white"
+                        android:text="Winter Indonesia"
+                        android:textSize="20sp"
+                        android:layout_marginStart="30dp"
+                        android:layout_gravity="start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                    <ImageView
+                        android:id="@+id/starswid"
+                        android:visibility="invisible"
+                        android:src="@drawable/star"
+                        android:layout_toEndOf="@+id/winterIDtitle"
+                        android:layout_width="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_height="20dp">
+
+                    </ImageView>
+                    <TextView
+                        android:id="@+id/winterIDvalue"
+                        android:textColor="@color/white"
+                        android:text="0%"
+                        android:textSize="20sp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/lambournetitle"
+                        android:textColor="@color/white"
+                        android:text="Arjodarmoko"
+                        android:textSize="20sp"
+                        android:layout_marginStart="30dp"
+                        android:layout_gravity="start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/starsarjo"
+                        android:visibility="invisible"
+                        android:src="@drawable/star"
+                        android:layout_toEndOf="@+id/lambournetitle"
+                        android:layout_width="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_height="20dp">
+
+                    </ImageView>
+                    <TextView
+                        android:id="@+id/lambournevalue"
+                        android:textColor="@color/white"
+                        android:text="0%"
+                        android:textSize="20sp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                </RelativeLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

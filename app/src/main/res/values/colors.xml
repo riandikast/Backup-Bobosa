@@ -10,12 +10,16 @@
     <color name="brown">#BC8E71</color>
     <color name="transparent">#00000000</color>
     <color name="red">#FF0000</color>
-    <color name="blue">#0C898E</color>
+    <color name="blue">#0a6165</color>
     <color name="sigeluLight">#00b8b6</color>
     <color name="branco">#FFFFFFFF</color>
     <color name="cream">#f8f0c6</color>
     <color name="browncow">#813f20</color>
     <color name="darkpurple">#262a3d</color>
+    <color name="lightred">#f78482</color>
+    <color name="darkgrey"> #262626</color>
+
+
 
 
 

@@ -28,17 +28,61 @@
         <action
             android:id="@+id/action_homeFragment_to_panduanFragment"
             app:destination="@id/panduanFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_accuracyFragment"
+            app:destination="@id/accuracyFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_batchFragment"
+            app:destination="@id/batchFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_aboutFragment2"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_optionFragment"
+            app:destination="@id/optionFragment" />
     </fragment>
     <fragment
+        tools:layout="@layout/fragment_result"
         android:id="@+id/resultFragment"
         android:name="com.sleepydev.bobosa.View.Fragment.ResultFragment"
         android:label="ResultFragment" />
     <fragment
+        tools:layout="@layout/fragment_lib"
         android:id="@+id/libFragment"
         android:name="com.sleepydev.bobosa.View.Fragment.LibFragment"
         android:label="LibFragment" />
     <fragment
+        tools:layout="@layout/fragment_panduan"
         android:id="@+id/panduanFragment"
         android:name="com.sleepydev.bobosa.View.Fragment.PanduanFragment"
         android:label="PanduanFragment" />
+    <fragment
+
+        android:id="@+id/historyFragment"
+        android:name="com.sleepydev.bobosa.View.Fragment.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/accuracyFragment"
+        android:name="com.sleepydev.bobosa.View.Fragment.AccuracyFragment"
+        tools:layout="@layout/fragment_accuracy"
+        android:label="AccuracyFragment" />
+    <fragment
+        android:id="@+id/batchFragment"
+        android:name="com.sleepydev.bobosa.View.Fragment.BatchFragment"
+        android:label="fragment_batch"
+        tools:layout="@layout/fragment_batch" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.sleepydev.bobosa.View.Fragment.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/optionFragment"
+        android:name="com.sleepydev.bobosa.View.Fragment.OptionFragment"
+        android:label="fragment_option"
+        tools:layout="@layout/fragment_option" />
 </navigation>

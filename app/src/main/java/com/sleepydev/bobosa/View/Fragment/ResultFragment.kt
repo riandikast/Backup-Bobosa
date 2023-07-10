@@ -27,6 +27,7 @@ import java.time.format.FormatStyle
 class ResultFragment : Fragment() {
     private var _binding: FragmentResultBinding? = null
     private val binding get() = _binding!!
+    lateinit var rekomendasi: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -60,20 +61,35 @@ class ResultFragment : Fragment() {
         }
 
         val getJenis = binding.jenissapi.text.toString()
+
         if (getJenis == "Peranakan Ongole (PO)") {
+            val rec = "Untuk sapi jenis Peranakan Ongole (PO) disarankan menggunakan hasil dari rumus Arjodarmoko"
             binding.starsarjo.visibility = View.VISIBLE
-            binding.rekomenval.text =
-                "Untuk sapi jenis Peranakan Ongole (PO) disarankan menggunakan hasil dari rumus Arjodarmoko"
+            binding.rekomenval.text = rec
+            rekomendasi = rec
+
         }
+
         if (getJenis == "Bali Jantan") {
+            val rec = "Untuk sapi jenis Bali Jantan disarankan menggunakan hasil dari rumus Winter Indonesia"
             binding.starswid.visibility = View.VISIBLE
-            binding.rekomenval.text =
-                "Untuk sapi jenis Bali Jantan disarankan menggunakan hasil dari rumus Winter Indonesia"
+            binding.rekomenval.text = rec
+            rekomendasi = rec
         }
+
         if (getJenis == "Bali Betina") {
+            val rec = "Untuk sapi jenis Bali Betina disarankan menggunakan hasil dari rumus School Denmark"
             binding.starsdenm.visibility = View.VISIBLE
-            binding.rekomenval.text =
-                "Untuk sapi jenis Bali Betina disarankan menggunakan hasil dari rumus School Denmark"
+            binding.rekomenval.text = rec
+            rekomendasi = rec
+
+        }
+
+        if (getJenis == "-") {
+            val rec = "Masukan jenis sapi untuk mendapatkan rekomendasi rumus dari sistem"
+            binding.rekomenval.text = rec
+            rekomendasi = rec
+
         }
 
 
@@ -117,7 +133,8 @@ class ResultFragment : Fragment() {
                     "${df.format(wEuropeToKg)} Kg",
                     "${df.format(wID)} Kg",
                     "${df.format(arjo)} Kg",
-                    "$formatted"
+                    "$formatted",
+                    "$rekomendasi"
                 )
             )
         }

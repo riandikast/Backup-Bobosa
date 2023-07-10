@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/homeFragment" android:title="Home"  android:icon="@drawable/home_icon2"/>
-    <item android:id="@+id/backupFragment" android:title="History"  android:icon="@drawable/history_icon"/>
-    <item android:id="@+id/resultFragment" android:title="Accuracy Test"  android:icon="@drawable/accurate"/>
-    <!--    <item android:id="@+id/settingsFragment" android:title="Settings" android:icon="@drawable/settings_icon" />-->
+    <item android:id="@+id/optionFragment" android:title="Option"  android:icon="@drawable/new_settings"/>
     <item android:id="@+id/aboutFragment" android:title="About" android:icon="@drawable/about_icon2" />
 </menu>

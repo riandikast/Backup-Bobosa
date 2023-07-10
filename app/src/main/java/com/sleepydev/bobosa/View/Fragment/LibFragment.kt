@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import com.sleepydev.bobosa.R
+import com.sleepydev.bobosa.View.Activity.MainActivity
 import com.sleepydev.bobosa.databinding.FragmentHomeBinding
 import com.sleepydev.bobosa.databinding.FragmentLibBinding
 import com.sleepydev.bobosa.databinding.InputDialogBinding
@@ -26,8 +27,7 @@ class LibFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding =  FragmentLibBinding.inflate(inflater, container, false)
         val view = binding.root
-        val apptitle = activity?.findViewById<TextView>(R.id.apptitle)
-        apptitle?.text = "Perpustakaan"
+        (activity as MainActivity).refreshTitle()
         binding.lihatSDenmark.setOnClickListener {
             val inputBinding = RumusDialogBinding.inflate(inflater, container, false)
             val inputView = inputBinding.root

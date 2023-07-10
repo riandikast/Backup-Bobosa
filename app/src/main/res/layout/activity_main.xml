@@ -122,12 +122,12 @@
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
-        android:background="@color/white"
-        app:itemTextColor="@color/black"
-        android:layout_width="220dp"
+
+        android:layout_width="160dp"
         app:itemTextAppearance="@style/NavigationDrawerStyle"
         app:itemIconSize="30dp"
         app:itemIconPadding="20dp"
+
         app:itemHorizontalPadding="20dp"
         app:itemVerticalPadding="16dp"
         app:itemIconTint="@color/black"

@@ -20,4 +20,5 @@ data class History(
     @ColumnInfo(name = "wi") var winter_indonesia: String,
     @ColumnInfo(name = "ar") var arjo: String,
     @ColumnInfo(name = "time") var waktu: String,
+    @ColumnInfo(name = "rekomendasi") var rec: String,
 ): Parcelable
