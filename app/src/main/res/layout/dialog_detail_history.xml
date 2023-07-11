@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/rounded_dialog2"
+    android:background="@color/blue"
     android:minWidth="800dp"
     android:minHeight="460dp"
     android:orientation="vertical">
@@ -440,18 +440,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <TextView
+                    <me.biubiubiu.justifytext.library.JustifyTextView
                         android:id="@+id/rekomenval"
                         android:textColor="@color/white"
                         android:gravity="center_horizontal"
-                        android:layout_marginHorizontal="20dp"
-                        android:text="Untuk Sapi Jenis X disarankan menggunakan hasil dari rumus y"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Untuk Sapi Jenis X disarankan menggunakan hasil dari rumus y \n"
                         android:textSize="16sp"
                         android:layout_marginBottom="30dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                    </TextView>
+                    </me.biubiubiu.justifytext.library.JustifyTextView>
 
 
                 </LinearLayout>

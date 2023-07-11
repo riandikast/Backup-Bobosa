@@ -391,6 +391,7 @@
                     android:src="@drawable/star"
                     android:layout_toEndOf="@+id/lambournetitle"
                     android:layout_width="20dp"
+
                     android:layout_centerVertical="true"
                     android:layout_marginHorizontal="5dp"
                     android:layout_height="20dp">
@@ -437,17 +438,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
+                <me.biubiubiu.justifytext.library.JustifyTextView
                     android:id="@+id/rekomenval"
                     android:textColor="@color/white"
+                    android:layout_marginStart="50dp"
                     android:gravity="center_horizontal"
-                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="10dp"
                     android:text="Untuk Sapi Jenis X disarankan menggunakan hasil dari rumus y"
                     android:textSize="17sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                </TextView>
+                </me.biubiubiu.justifytext.library.JustifyTextView>
 
 
             </LinearLayout>

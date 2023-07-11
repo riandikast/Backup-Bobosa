@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/rounded_dialog2"
+    android:background="@color/blue"
     android:minWidth="800dp"
     android:minHeight="460dp"
     android:orientation="vertical">
@@ -66,11 +66,11 @@
 
                 <ImageView
 
-                    android:src="@drawable/opened_book"
+                    android:src="@drawable/newopenbook"
                     android:layout_width="match_parent"
                     android:layout_height="170dp"
                     android:layout_marginVertical="5dp"
-                    android:padding="1dp"
+                    android:padding="15dp"
                     />
 
                 <TextView
@@ -78,7 +78,7 @@
                     android:textColor="@color/white"
                     android:text="Rumus Arjodarmoko"
                     android:layout_gravity="center"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:layout_marginBottom="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">

@@ -17,7 +17,6 @@
         android:layout_height="match_parent">
         <LinearLayout
             android:orientation="vertical"
-
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -37,7 +36,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                    <TextView
+                    <me.biubiubiu.justifytext.library.JustifyTextView
                         android:id="@+id/title"
                         android:textColor="@color/white"
                         android:textSize="22sp"
@@ -47,7 +46,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
 
-                    </TextView>
+                    </me.biubiubiu.justifytext.library.JustifyTextView>
 
 
                 </RelativeLayout>
@@ -65,29 +64,29 @@
 
             </LinearLayout>
 
-            <TextView
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:textColor="@color/white"
+                android:textSize="19sp"
+                android:layout_marginTop="20dp"
+                android:text="Bobosa merupakan aplikasi estimasi bobot badan sapi secara digital yang melakukan estimasi menggunakan pendekatan rumus hasil penelitian \n"
+                android:layout_marginHorizontal="50dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </me.biubiubiu.justifytext.library.JustifyTextView>
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
 
                 android:textColor="@color/white"
                 android:textSize="19sp"
                 android:layout_marginTop="20dp"
-                android:text="Bobosa merupakan aplikasi estimasi bobot badan sapi secara digital yang melakukan estimasi menggunakan pendekatan rumus hasil penelitian"
+                android:text="Hasil dari bobosa tidak selalu 100% akurat, oleh karna itu bobosa juga menyiapkan fitur akurasi supaya pengguna bisa mengetahui berapa persentase peyimpangan dari estimasi yang dihasilkan aplikasi ini \n"
                 android:layout_marginHorizontal="50dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-            </TextView>
-
-            <TextView
-
-                android:textColor="@color/white"
-                android:textSize="19sp"
-                android:layout_marginTop="20dp"
-                android:text="Hasil dari bobosa tidak selalu 100% akurat, oleh karna itu bobosa juga menyiapkan fitur akurasi supaya pengguna bisa mengetahui berapa persentase peyimpangan dari estimasi yang dihasilkan aplikasi ini"
-                android:layout_marginHorizontal="50dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-            </TextView>
+            </me.biubiubiu.justifytext.library.JustifyTextView>
 
             <TextView
 

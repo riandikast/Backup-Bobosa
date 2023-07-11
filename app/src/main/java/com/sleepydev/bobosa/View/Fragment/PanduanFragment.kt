@@ -40,7 +40,7 @@ class PanduanFragment : Fragment() {
                 .setView(inputView)
                 .create()
             inputBinding.namaPanduan.text = "Mengukur Lingkar Dada"
-            inputBinding.isiPanduan.text = "Untuk mengukur lingkar dada bisa dilakukan dengan melingkarkan pita ukur pada bagian yang ditandai dengen angka 5 pada gambar di atas"
+            inputBinding.isiPanduan.text = "Untuk mengukur lingkar dada bisa dilakukan dengan melingkarkan pita ukur pada bagian yang ditandai dengen angka 5 pada gambar di atas \n"
             inputBinding.btnclose.setOnClickListener {
                 a.dismiss()
             }
@@ -54,7 +54,7 @@ class PanduanFragment : Fragment() {
                 .setView(inputView)
                 .create()
             inputBinding.namaPanduan.text = "Mengukur Panjang Badan"
-            inputBinding.isiPanduan.text = "Panjang badan bisa diketahui dengan mengukur panjang bongkol bahu sampai dengan ujung tulang duduk yang terdapat pada angka 6 dalam gambar"
+            inputBinding.isiPanduan.text = "Panjang badan bisa diketahui dengan mengukur panjang bongkol bahu sampai dengan ujung tulang duduk yang terdapat pada angka 6 dalam gambar \n"
             inputBinding.btnclose.setOnClickListener {
                 a.dismiss()
             }
@@ -68,7 +68,7 @@ class PanduanFragment : Fragment() {
                 .setView(inputView)
                 .create()
             inputBinding.namaPanduan.text = "Mengukur Tinggi Badan"
-            inputBinding.isiPanduan.text = "Tinggi badan diukur dari tanah ke titik tertinggi gumba di ilustrasikan pada angka 1 dalam gambar, pengukuran dilakukan dengan sapi dalam keadaan tegak dan berpijak pada permukaan yang datar"
+            inputBinding.isiPanduan.text = "Tinggi badan diukur dari tanah ke titik tertinggi gumba di ilustrasikan pada angka 1 dalam gambar, pengukuran dilakukan dengan sapi dalam keadaan tegak dan berpijak pada permukaan yang datar \n"
             inputBinding.btnclose.setOnClickListener {
                 a.dismiss()
             }

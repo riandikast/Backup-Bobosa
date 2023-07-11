@@ -16,7 +16,7 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_marginBottom="30dp"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <ImageView
@@ -163,6 +163,7 @@
 
 
             <TextView
+
                 android:id="@+id/lainya_text"
                 android:textColor="@color/blue"
                 android:layout_marginTop="25dp"
@@ -175,155 +176,168 @@
                 android:layout_height="wrap_content">
             </TextView>
 
-            <HorizontalScrollView
-                android:scrollbars="none"
+            <LinearLayout
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
+
+                <HorizontalScrollView
+                    android:scrollbars="none"
+                    android:fillViewport="true"
+
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="horizontal"
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_history"
-                        android:layout_marginVertical="12dp"
-                        android:layout_width="220dp"
-                        android:backgroundTint="@color/blue"
-                        android:layout_marginStart="25dp"
-                        app:cardCornerRadius="10dp"
-                        android:layout_height="75dp">
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-                        <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_gravity="center"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent">
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_history"
+                            android:layout_marginVertical="12dp"
+                            android:layout_width="220dp"
+                            android:backgroundTint="@color/blue"
+                            android:layout_marginStart="25dp"
+                            app:cardCornerRadius="10dp"
+                            android:layout_height="75dp">
 
-                            <ImageView
-
+                            <LinearLayout
+                                android:orientation="horizontal"
                                 android:layout_gravity="center"
-                                android:src="@drawable/history_icon"
-                                android:padding="8dp"
-
-                                android:layout_marginHorizontal="8dp"
-                                android:layout_width="55dp"
-                                android:layout_height="55dp">
-
-                            </ImageView>
-
-
-                            <TextView
-                                android:text="Riwayat"
-                                android:textSize="18sp"
-                                android:gravity="center_vertical"
-                                android:textColor="@color/white"
-                                android:layout_marginEnd="20dp"
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="match_parent">
 
-                            </TextView>
+                                <ImageView
 
-                        </LinearLayout>
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/history_icon"
+                                    android:padding="8dp"
+
+                                    android:layout_marginHorizontal="8dp"
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp">
+
+                                </ImageView>
+
+
+                                <TextView
+                                    android:text="Riwayat"
+                                    android:textSize="18sp"
+                                    android:gravity="center_vertical"
+                                    android:textColor="@color/white"
+                                    android:layout_marginEnd="20dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                </TextView>
+
+                            </LinearLayout>
 
 
 
-                    </androidx.cardview.widget.CardView>
+                        </androidx.cardview.widget.CardView>
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_akurasi"
-                        android:layout_marginVertical="12dp"
-                        android:layout_width="220dp"
-                        android:backgroundTint="@color/blue"
-                        android:layout_marginStart="25dp"
-                        app:cardCornerRadius="10dp"
-                        android:layout_height="75dp">
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_akurasi"
+                            android:layout_marginVertical="12dp"
+                            android:layout_width="220dp"
+                            android:backgroundTint="@color/blue"
+                            android:layout_marginStart="25dp"
+                            app:cardCornerRadius="10dp"
+                            android:layout_height="75dp">
 
-                        <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_gravity="center"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent">
-
-                            <ImageView
-
+                            <LinearLayout
+                                android:orientation="horizontal"
                                 android:layout_gravity="center"
-                                android:src="@drawable/accurate"
-                                android:padding="5dp"
-                                android:layout_marginHorizontal="8dp"
-                                android:layout_width="55dp"
-                                android:layout_height="55dp">
-
-                            </ImageView>
-
-
-                            <TextView
-                                android:text="Akurasi"
-                                android:textSize="18sp"
-                                android:gravity="center_vertical"
-                                android:textColor="@color/white"
-                                android:layout_marginEnd="20dp"
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="match_parent">
 
-                            </TextView>
+                                <ImageView
 
-                        </LinearLayout>
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/accurate"
+                                    android:padding="5dp"
+                                    android:layout_marginHorizontal="8dp"
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp">
+
+                                </ImageView>
+
+
+                                <TextView
+                                    android:text="Akurasi"
+                                    android:textSize="18sp"
+                                    android:gravity="center_vertical"
+                                    android:textColor="@color/white"
+                                    android:layout_marginEnd="20dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                </TextView>
+
+                            </LinearLayout>
 
 
 
-                    </androidx.cardview.widget.CardView>
+                        </androidx.cardview.widget.CardView>
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_batch"
-                        android:layout_marginVertical="12dp"
-                        android:layout_width="220dp"
-                        android:backgroundTint="@color/blue"
-                        android:layout_marginHorizontal="25dp"
-                        app:cardCornerRadius="10dp"
-                        android:layout_height="75dp">
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_batch"
+                            android:layout_marginVertical="12dp"
+                            android:layout_width="220dp"
+                            android:backgroundTint="@color/blue"
+                            android:layout_marginHorizontal="25dp"
+                            app:cardCornerRadius="10dp"
+                            android:layout_height="75dp">
 
-                        <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_gravity="center"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent">
-
-                            <ImageView
-
+                            <LinearLayout
+                                android:orientation="horizontal"
                                 android:layout_gravity="center"
-                                android:src="@drawable/batch"
-                                android:padding="5dp"
-                                android:layout_marginHorizontal="8dp"
-                                android:layout_width="55dp"
-                                android:layout_height="55dp">
-
-                            </ImageView>
-
-
-                            <TextView
-                                android:text="Batch Estimasi"
-                                android:textSize="18sp"
-                                android:gravity="center_vertical"
-                                android:textColor="@color/white"
-                                android:layout_marginEnd="20dp"
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="match_parent">
 
-                            </TextView>
+                                <ImageView
 
-                        </LinearLayout>
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/batch"
+                                    android:padding="5dp"
+                                    android:layout_marginHorizontal="8dp"
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp">
+
+                                </ImageView>
+
+
+                                <TextView
+                                    android:text="Batch Estimasi"
+                                    android:textSize="18sp"
+                                    android:gravity="center_vertical"
+                                    android:textColor="@color/white"
+                                    android:layout_marginEnd="20dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                </TextView>
+
+                            </LinearLayout>
 
 
 
-                    </androidx.cardview.widget.CardView>
+                        </androidx.cardview.widget.CardView>
 
 
 
 
 
 
-                </LinearLayout>
-            </HorizontalScrollView>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+
+
+
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

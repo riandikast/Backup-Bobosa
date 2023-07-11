@@ -147,11 +147,11 @@
                                     android:layout_height="50dp">
 
                                     <ImageView
-                                        android:src="@drawable/opened_book"
+                                        android:src="@drawable/newopenbook"
                                         android:layout_width="60dp"
 
                                         android:layout_height="match_parent"
-                                        android:padding="7dp"
+                                        android:padding="12dp"
                                         />
 
                                     <TextView
@@ -247,11 +247,11 @@
                                     android:layout_height="50dp">
 
                                     <ImageView
-                                        android:src="@drawable/opened_book"
+                                        android:src="@drawable/newopenbook"
                                         android:layout_width="60dp"
 
                                         android:layout_height="match_parent"
-                                        android:padding="7dp"
+                                        android:padding="12dp"
                                         />
 
                                     <TextView
@@ -347,11 +347,11 @@
                                     android:layout_height="50dp">
 
                                     <ImageView
-                                        android:src="@drawable/opened_book"
+                                        android:src="@drawable/newopenbook"
                                         android:layout_width="60dp"
 
                                         android:layout_height="match_parent"
-                                        android:padding="7dp"
+                                        android:padding="12dp"
                                         />
 
                                     <TextView

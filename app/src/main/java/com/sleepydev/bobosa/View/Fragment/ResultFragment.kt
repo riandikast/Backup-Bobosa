@@ -84,30 +84,33 @@ class ResultFragment : Fragment() {
         val getJenis = binding.jenissapi.text.toString()
 
         if (getJenis == "Peranakan Ongole (PO)") {
-            val rec = "Untuk sapi jenis Peranakan Ongole (PO) disarankan menggunakan hasil dari rumus Arjodarmoko"
-            binding.starsarjo.visibility = View.VISIBLE
+            val rec = "Untuk sapi jenis Peranakan Ongole (PO) disarankan menggunakan hasil dari rumus Arjodarmoko \n"
+//            binding.starsarjo.visibility = View.VISIBLE
+            binding.lambournetitle.setTextColor(Color.parseColor("#ffca3a"))
             binding.rekomenval.text = rec
             rekomendasi = rec
 
         }
 
         if (getJenis == "Bali Jantan") {
-            val rec = "Untuk sapi jenis Bali Jantan disarankan menggunakan hasil dari rumus Winter Indonesia"
-            binding.starswid.visibility = View.VISIBLE
+            val rec = "Untuk sapi jenis Bali Jantan disarankan menggunakan hasil dari rumus Winter Indonesia \n"
+//            binding.starswid.visibility = View.VISIBLE
+            binding.winterIDtitle.setTextColor(Color.parseColor("#ffca3a"))
             binding.rekomenval.text = rec
             rekomendasi = rec
         }
 
         if (getJenis == "Bali Betina") {
-            val rec = "Untuk sapi jenis Bali Betina disarankan menggunakan hasil dari rumus School Denmark"
-            binding.starsdenm.visibility = View.VISIBLE
+            val rec = "Untuk sapi jenis Bali Betina disarankan menggunakan hasil dari rumus School Denmark \n"
+//            binding.starsdenm.visibility = View.VISIBLE
+            binding.schoorltitle.setTextColor(Color.parseColor("#ffca3a"))
             binding.rekomenval.text = rec
             rekomendasi = rec
 
         }
 
         if (getJenis == "-") {
-            val rec = "Masukan jenis sapi untuk mendapatkan rekomendasi rumus dari sistem"
+            val rec = "Masukan jenis sapi untuk mendapatkan rekomendasi rumus dari sistem \n"
             binding.rekomenval.text = rec
             rekomendasi = rec
 

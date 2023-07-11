@@ -1,5 +1,6 @@
 package com.sleepydev.bobosa.Adapter
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -48,18 +49,21 @@ data class AdapterHistory(var listHis: List<History>):RecyclerView.Adapter<Adapt
             historyBinding.wintervalue.text =  listHis[position].winter_eropa
             historyBinding.winterIDvalue.text = listHis[position].winter_indonesia
             historyBinding.lambournevalue.text = listHis[position].arjo
-            historyBinding.rekomenval.text = listHis[position].rec
+            historyBinding.rekomenval.text = "${listHis[position].rec} \n"
 
             if (listHis[position].jenis_sapi == "Peranakan Ongole (PO)") {
-                historyBinding.starsarjo.visibility = View.VISIBLE
+//                historyBinding.starsarjo.visibility = View.VISIBLE
+                historyBinding.lambournetitle.setTextColor(Color.parseColor("#ffca3a"))
             }
 
             if (listHis[position].jenis_sapi == "Bali Jantan") {
-                historyBinding.starswid.visibility = View.VISIBLE
+//                historyBinding.starswid.visibility = View.VISIBLE
+                historyBinding.winterIDtitle.setTextColor(Color.parseColor("#ffca3a"))
             }
 
             if (listHis[position].jenis_sapi == "Bali Betina") {
-                historyBinding.starsdenm.visibility = View.VISIBLE
+//                historyBinding.starsdenm.visibility = View.VISIBLE
+                historyBinding.schoorltitle.setTextColor(Color.parseColor("#ffca3a"))
             }
 
 

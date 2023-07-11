@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/rounded_dialog2"
+    android:background="@color/blue"
     android:minWidth="800dp"
     android:minHeight="460dp"
     android:orientation="vertical">
@@ -47,10 +47,12 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_marginHorizontal="15dp"
@@ -71,6 +73,7 @@
                     <LinearLayout
                         android:layout_marginTop="15dp"
                         android:orientation="vertical"
+                        android:layout_centerInParent="true"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
@@ -99,38 +102,30 @@
                         <LinearLayout
                             android:orientation="vertical"
                             android:gravity="center"
+                            android:layout_gravity="center"
                             android:layout_marginHorizontal="20dp"
                             android:background="@color/blue"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
-                            <TextView
+                            <me.biubiubiu.justifytext.library.JustifyTextView
                                 android:id="@+id/isiPanduan"
-
 
                                 android:textColor="@color/white"
                                 android:text="Untuk mengukur lingkar dada bisa dilakukan dengan melingkarkan pita ukur pada bagian yang ditandai dengen angka 5 pada gambar di atas"
-                                android:layout_gravity="center"
+                                android:layout_gravity="center_horizontal"
                                 android:textSize="17sp"
+                                android:layout_marginStart="5dp"
                                 android:layout_marginBottom="20dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
-                            </TextView>
+                            </me.biubiubiu.justifytext.library.JustifyTextView>
+
                         </LinearLayout>
-
-
-
-
-
-
 
                     </LinearLayout>
 
-
-
                 </RelativeLayout>
-
-
 
 
             </com.google.android.material.card.MaterialCardView>
