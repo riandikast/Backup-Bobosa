@@ -22,7 +22,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:src="@drawable/cow_worker"
+                android:src="@drawable/compresseed_cow_worker"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"

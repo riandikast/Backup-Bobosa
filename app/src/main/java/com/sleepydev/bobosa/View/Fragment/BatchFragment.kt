@@ -14,6 +14,7 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
+import androidx.core.view.ViewCompat
 import androidx.navigation.NavOptions
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
@@ -60,7 +61,7 @@ class BatchFragment : Fragment() {
         selected = ""
         getBatch()
 
-
+        ViewCompat.setNestedScrollingEnabled(binding.listBatch, false);
         val rumus = listOf( "Schoorl Denmark", "Schoorl Indonesia", "Winter Eropa", "Winter Indonesia", "Arjodarmoko")
         val adapter = ArrayAdapter(requireActivity(), R.layout.list_rumus, rumus)
         binding.jenisoption.setDropDownBackgroundResource(R.color.lightgreen)

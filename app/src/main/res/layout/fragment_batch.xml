@@ -9,9 +9,9 @@
     android:background="@color/blue"
     tools:context=".View.Fragment.HomeFragment">
 
-<!--    <ScrollView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent">-->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:orientation="vertical"
@@ -117,7 +117,7 @@
                     android:textColor="@color/white"
                     android:text="Hitung"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp">
+                    android:layout_height="40dp">
 
                 </Button>
 
@@ -135,7 +135,7 @@
                     <TextView
                         android:id="@+id/title"
                         android:textColor="@color/white"
-                        android:textSize="22sp"
+                        android:textSize="20sp"
                         android:layout_marginTop="20dp"
                         android:text="Hasil Estimasi"
                         android:layout_marginHorizontal="50dp"
@@ -205,7 +205,7 @@
 
         </LinearLayout>
 
-<!--    </ScrollView>-->
+    </androidx.core.widget.NestedScrollView>
 
 
 </LinearLayout>

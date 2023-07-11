@@ -44,72 +44,79 @@
 
     </RelativeLayout>
 
-    <com.google.android.material.card.MaterialCardView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_marginHorizontal="15dp"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="@color/blue"
-        app:cardCornerRadius="10dp"
-        app:strokeColor="@color/white"
-        app:strokeWidth="1dp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="50dp"
-        android:layout_height="wrap_content">
-
-        <RelativeLayout
-
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
-            <LinearLayout
-                android:layout_marginTop="15dp"
-                android:orientation="vertical"
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/blue"
+                app:cardCornerRadius="10dp"
+                app:strokeColor="@color/white"
+                app:strokeWidth="1dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="50dp"
                 android:layout_height="wrap_content">
 
-                <ImageView
+                <RelativeLayout
 
-                    android:layout_marginHorizontal="15dp"
-                    android:src="@drawable/cowp"
                     android:layout_width="match_parent"
-                    android:layout_height="320dp"
-                    android:layout_marginVertical="5dp"
-                    android:padding="1dp"
-                    />
+                    android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/nama_panduan"
-                    android:textColor="@color/white"
-                    android:text="Mengukur Lingkar Dada"
-                    android:layout_gravity="center"
-                    android:textSize="21sp"
-                    android:layout_marginBottom="20dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                </TextView>
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:layout_marginHorizontal="20dp"
-                    android:background="@color/blue"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                       android:id="@+id/isiPanduan"
-                        android:justificationMode="inter_word"
-                        android:layout_marginHorizontal="10dp"
-                        android:textColor="@color/white"
-                        android:text="Untuk mengukur lingkar dada bisa dilakukan dengan melingkarkan pita ukur pada bagian yang ditandai dengen angka 5 pada gambar di atas"
-                        android:layout_gravity="center"
-                        android:textSize="17sp"
-                        android:layout_marginBottom="20dp"
+                    <LinearLayout
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
-                    </TextView>
-                </LinearLayout>
+
+                        <ImageView
+
+                            android:layout_marginHorizontal="15dp"
+                            android:src="@drawable/cowp"
+                            android:layout_width="match_parent"
+                            android:layout_height="320dp"
+                            android:layout_marginVertical="5dp"
+                            android:padding="1dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/nama_panduan"
+                            android:textColor="@color/white"
+                            android:text="Mengukur Lingkar Dada"
+                            android:layout_gravity="center"
+                            android:textSize="21sp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_marginHorizontal="20dp"
+                            android:background="@color/blue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/isiPanduan"
+
+
+                                android:textColor="@color/white"
+                                android:text="Untuk mengukur lingkar dada bisa dilakukan dengan melingkarkan pita ukur pada bagian yang ditandai dengen angka 5 pada gambar di atas"
+                                android:layout_gravity="center"
+                                android:textSize="17sp"
+                                android:layout_marginBottom="20dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                            </TextView>
+                        </LinearLayout>
 
 
 
@@ -117,15 +124,20 @@
 
 
 
-            </LinearLayout>
+                    </LinearLayout>
 
 
 
-        </RelativeLayout>
+                </RelativeLayout>
 
 
 
 
-    </com.google.android.material.card.MaterialCardView>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+
 
 </LinearLayout>

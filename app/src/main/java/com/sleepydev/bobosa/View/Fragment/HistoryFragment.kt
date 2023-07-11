@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
+import androidx.core.view.ViewCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sleepydev.bobosa.Adapter.AdapterHistory
 import com.sleepydev.bobosa.Database.HistoryDB
@@ -38,6 +39,7 @@ class HistoryFragment : Fragment() {
         val view = binding.root
         (activity as MainActivity).refreshTitle()
         getHistory()
+        ViewCompat.setNestedScrollingEnabled(binding.listHistory, false);
         binding.deleteIcon.setOnClickListener {
             val deleteBinding = DeleteDialogBinding.inflate(inflater, container, false)
             val inputView = deleteBinding.root

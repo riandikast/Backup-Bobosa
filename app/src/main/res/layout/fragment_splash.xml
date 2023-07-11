@@ -10,7 +10,7 @@
 
     <ImageView
         android:id="@+id/appicon"
-        android:src="@drawable/cow_icon_trans"
+        android:src="@drawable/compressed_app_icon"
         android:paddingHorizontal="80dp"
         android:layout_above="@+id/space"
         android:layout_width="match_parent"

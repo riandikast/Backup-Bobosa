@@ -10,9 +10,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.lifecycle.asLiveData
+import androidx.navigation.fragment.findNavController
 import com.sleepydev.bobosa.Database.History
 import com.sleepydev.bobosa.Database.HistoryDB
 import com.sleepydev.bobosa.Datastore.StateManager
+import com.sleepydev.bobosa.R
 
 import com.sleepydev.bobosa.View.Activity.MainActivity
 import com.sleepydev.bobosa.databinding.FragmentResultBinding
@@ -156,6 +158,10 @@ class ResultFragment : Fragment() {
                     "$rekomendasi"
                 )
             )
+        }
+
+        binding.btnback.setOnClickListener {
+            findNavController().navigate(R.id.action_resultFragment_to_homeFragment)
         }
         return view
 

@@ -93,7 +93,7 @@
                                         android:layout_height="match_parent">
 
                                         <ImageView
-                                            android:src="@drawable/newbook"
+                                            android:src="@drawable/compressed_newbook"
                                             android:layout_width="match_parent"
                                             android:layout_height="140dp"
                                             android:layout_marginVertical="10dp"
@@ -190,7 +190,7 @@
 
                                         <ImageView
 
-                                            android:src="@drawable/newbook"
+                                            android:src="@drawable/compressed_newbook"
                                             android:layout_width="match_parent"
                                             android:layout_height="140dp"
                                             android:layout_marginVertical="10dp"
@@ -288,7 +288,7 @@
                                         android:layout_height="match_parent">
 
                                         <ImageView
-                                            android:src="@drawable/newbook"
+                                            android:src="@drawable/compressed_newbook"
                                             android:layout_width="match_parent"
                                             android:layout_height="140dp"
                                             android:layout_marginVertical="10dp"
@@ -387,7 +387,7 @@
 
                                         <ImageView
 
-                                            android:src="@drawable/newbook"
+                                            android:src="@drawable/compressed_newbook"
                                             android:layout_width="match_parent"
                                             android:layout_height="140dp"
                                             android:layout_marginVertical="10dp"
@@ -489,7 +489,7 @@
 
                                         <ImageView
 
-                                            android:src="@drawable/newbook"
+                                            android:src="@drawable/compressed_newbook"
                                             android:layout_width="match_parent"
                                             android:layout_height="140dp"
                                             android:layout_marginVertical="10dp"

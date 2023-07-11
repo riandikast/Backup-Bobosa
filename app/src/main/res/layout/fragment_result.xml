@@ -463,6 +463,27 @@
                 android:background="@color/white"/>
         </LinearLayout>
 
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:backgroundTint="@color/blue"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnback"
+                android:backgroundTint="@color/blue"
+                android:textColor="@color/white"
+                android:text="Kembali ke Home"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+            </Button>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
 
     </LinearLayout>
 
