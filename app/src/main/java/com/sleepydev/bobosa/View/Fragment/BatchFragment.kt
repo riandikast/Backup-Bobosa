@@ -4,6 +4,7 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.text.style.BackgroundColorSpan
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -59,8 +60,11 @@ class BatchFragment : Fragment() {
         selected = ""
         getBatch()
 
+
         val rumus = listOf( "Schoorl Denmark", "Schoorl Indonesia", "Winter Eropa", "Winter Indonesia", "Arjodarmoko")
         val adapter = ArrayAdapter(requireActivity(), R.layout.list_rumus, rumus)
+        binding.jenisoption.setDropDownBackgroundResource(R.color.lightgreen)
+
         binding.jenisoption.setAdapter(adapter)
         binding.jenisoption.onItemClickListener = AdapterView.OnItemClickListener {
                 adapterView, view, i, l ->

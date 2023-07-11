@@ -102,6 +102,7 @@ class HomeFragment : Fragment() {
 
             val jenis = listOf( "Peranakan Ongole (PO)", "Bali Jantan", "Bali Betina")
             val adapter = ArrayAdapter(requireActivity(), R.layout.list_jenis, jenis)
+            inputBinding.jenisoption.setDropDownBackgroundResource(R.color.lightgreen)
             inputBinding.jenisoption.setAdapter(adapter)
             inputBinding.jenisoption.onItemClickListener = AdapterView.OnItemClickListener {
                     adapterView, view, i, l ->
