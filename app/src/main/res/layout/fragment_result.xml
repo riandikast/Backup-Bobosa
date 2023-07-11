@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:id="@+id/parentHasil"
     android:orientation="vertical"
     tools:context=".View.Fragment.HomeFragment">
 
@@ -36,6 +37,7 @@
             android:layout_height="wrap_content">
 
             <View
+                android:id="@+id/topLine"
                 android:layout_width="match_parent"
                 android:layout_height="4dp"
                 android:layout_marginHorizontal="20dp"
@@ -61,7 +63,7 @@
                     android:id="@+id/lingkardadatext"
                     android:textColor="@color/white"
                     android:text="Lingkar Dada"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:layout_marginStart="30dp"
                     android:layout_gravity="start"
                     android:layout_width="wrap_content"
@@ -73,7 +75,7 @@
                     android:id="@+id/datalingkardada"
                     android:textColor="@color/white"
                     android:text="20cm"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:layout_marginEnd="30dp"
                     android:layout_alignParentEnd="true"
                     android:layout_width="wrap_content"
@@ -92,7 +94,7 @@
                     android:id="@+id/panjangbadantext"
                     android:textColor="@color/white"
                     android:text="Panjang Badan"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:layout_marginStart="30dp"
                     android:layout_gravity="start"
                     android:layout_width="wrap_content"
@@ -104,7 +106,7 @@
                     android:id="@+id/datapanjangbadan"
                     android:textColor="@color/white"
                     android:text="20cm"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:layout_marginEnd="30dp"
                     android:layout_alignParentEnd="true"
                     android:layout_width="wrap_content"
@@ -123,7 +125,7 @@
                     android:id="@+id/jenissapitext"
                     android:textColor="@color/white"
                     android:text="Jenis Sapi"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:layout_marginStart="30dp"
                     android:layout_gravity="start"
                     android:layout_width="wrap_content"
@@ -133,10 +135,15 @@
 
                 <TextView
                     android:id="@+id/jenissapi"
+
                     android:textColor="@color/white"
                     android:text="-"
-                    android:textSize="20sp"
+                    android:maxLines="2"
+                    android:textSize="18sp"
+                    android:layout_marginStart="40dp"
                     android:layout_marginEnd="30dp"
+                    android:layout_toEndOf="@id/jenissapitext"
+                    android:gravity="end"
                     android:layout_alignParentEnd="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
@@ -177,7 +184,10 @@
                     android:id="@+id/schoorltitle"
                     android:textColor="@color/white"
                     android:text="Schoorl Denmark"
-                    android:textSize="20sp"
+                    android:layout_toStartOf="@id/schoorlvalue"
+                    android:layout_alignParentStart="true"
+                    android:textSize="18sp"
+                    android:maxLines="2"
                     android:layout_marginStart="30dp"
                     android:layout_gravity="start"
                     android:layout_width="wrap_content"
@@ -199,9 +209,12 @@
 
                 <TextView
                     android:id="@+id/schoorlvalue"
+
+                    android:gravity="end
+"                   android:layout_marginStart="40dp"
                     android:textColor="@color/white"
                     android:text="0 Kg"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:layout_marginEnd="30dp"
                     android:layout_alignParentEnd="true"
                     android:layout_width="wrap_content"
@@ -220,7 +233,10 @@
                     android:id="@+id/schoorlIDtitle"
                     android:textColor="@color/white"
                     android:text="Schoorl Indonesia"
-                    android:textSize="20sp"
+                    android:maxLines="2"
+                    android:textSize="18sp"
+                    android:layout_toStartOf="@id/schoorlIDvalue"
+                    android:layout_alignParentStart="true"
                     android:layout_marginStart="30dp"
                     android:layout_gravity="start"
                     android:layout_width="wrap_content"
@@ -243,7 +259,10 @@
                     android:id="@+id/schoorlIDvalue"
                     android:textColor="@color/white"
                     android:text="0 Kg"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
+
+                    android:gravity="end
+"                   android:layout_marginStart="40dp"
                     android:layout_marginEnd="30dp"
                     android:layout_alignParentEnd="true"
                     android:layout_width="wrap_content"
@@ -262,7 +281,10 @@
                     android:id="@+id/wintertitle"
                     android:textColor="@color/white"
                     android:text="Winter Eropa"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
+                    android:maxLines="2"
+                    android:layout_toStartOf="@id/wintervalue"
+                    android:layout_alignParentStart="true"
                     android:layout_marginStart="30dp"
                     android:layout_gravity="start"
                     android:layout_width="wrap_content"
@@ -285,7 +307,10 @@
                     android:id="@+id/wintervalue"
                     android:textColor="@color/white"
                     android:text="0 Kg"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
+
+                    android:gravity="end
+"                   android:layout_marginStart="40dp"
                     android:layout_marginEnd="30dp"
                     android:layout_alignParentEnd="true"
                     android:layout_width="wrap_content"
@@ -304,9 +329,12 @@
                     android:id="@+id/winterIDtitle"
                     android:textColor="@color/white"
                     android:text="Winter Indonesia"
-                    android:textSize="20sp"
+                    android:layout_toStartOf="@id/winterIDvalue"
+                    android:layout_alignParentStart="true"
                     android:layout_marginStart="30dp"
                     android:layout_gravity="start"
+                    android:textSize="18sp"
+                    android:maxLines="2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
@@ -326,7 +354,10 @@
                     android:id="@+id/winterIDvalue"
                     android:textColor="@color/white"
                     android:text="0 Kg"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
+
+                    android:gravity="end
+"                   android:layout_marginStart="40dp"
                     android:layout_marginEnd="30dp"
                     android:layout_alignParentEnd="true"
                     android:layout_width="wrap_content"
@@ -344,7 +375,10 @@
                     android:id="@+id/lambournetitle"
                     android:textColor="@color/white"
                     android:text="Arjodarmoko"
-                    android:textSize="20sp"
+                    android:maxLines="2"
+                    android:textSize="18sp"
+                    android:layout_toStartOf="@id/lambournevalue"
+                    android:layout_alignParentStart="true"
                     android:layout_marginStart="30dp"
                     android:layout_gravity="start"
                     android:layout_width="wrap_content"
@@ -366,7 +400,10 @@
                     android:id="@+id/lambournevalue"
                     android:textColor="@color/white"
                     android:text="0 Kg"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
+
+                    android:gravity="end
+"                   android:layout_marginStart="40dp"
                     android:layout_marginEnd="30dp"
                     android:layout_alignParentEnd="true"
                     android:layout_width="wrap_content"
@@ -418,6 +455,7 @@
 
 
             <View
+                android:id="@+id/bottomLine"
                 android:layout_marginTop="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="4dp"

@@ -9,13 +9,14 @@
     tools:context=".View.Fragment.HomeFragment">
 
     <androidx.core.widget.NestedScrollView
-        android:layout_marginBottom="50dp"
+
         android:layout_width="match_parent"
 
         android:layout_height="match_parent">
 
         <LinearLayout
             android:orientation="vertical"
+            android:layout_marginBottom="50dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -43,7 +44,7 @@
                     android:layout_gravity="center_horizontal"
                     android:textColor="@color/white"
                     android:gravity="center_horizontal"
-                    android:textSize="25sp"
+                    android:textSize="24sp"
                     android:layout_marginHorizontal="50dp"
                     android:layout_width="wrap_content"
                     android:layout_marginBottom="20dp"
@@ -52,12 +53,15 @@
                 </TextView>
 
                 <HorizontalScrollView
+                    android:fadeScrollbars="false"
+                    android:scrollbarThumbHorizontal="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <LinearLayout
+
                         android:orientation="horizontal"
-                        android:layout_marginStart="50dp"
+                        android:layout_marginStart="20dp"
                         android:layout_marginVertical="20dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
@@ -65,7 +69,7 @@
                         <LinearLayout
                             android:orientation="vertical"
 
-                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginHorizontal="5dp"
                             android:layout_width="300dp"
                             android:layout_height="wrap_content">
 
@@ -75,9 +79,9 @@
                                 app:strokeWidth="2dp"
                                 android:backgroundTint="@color/blue"
                                 app:cardCornerRadius="10dp"
-
+                                android:layout_marginEnd="5dp"
                                 android:layout_marginVertical="10dp"
-                                android:layout_height="280dp">
+                                android:layout_height="250dp">
 
                                 <RelativeLayout
                                     android:layout_marginTop="10dp"
@@ -91,7 +95,7 @@
                                         <ImageView
                                             android:src="@drawable/newbook"
                                             android:layout_width="match_parent"
-                                            android:layout_height="170dp"
+                                            android:layout_height="140dp"
                                             android:layout_marginVertical="10dp"
                                             android:padding="20dp"
                                             />
@@ -161,7 +165,7 @@
 
                         <LinearLayout
                             android:orientation="vertical"
-                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginHorizontal="5dp"
                             android:layout_width="300dp"
                             android:layout_height="wrap_content">
 
@@ -171,8 +175,9 @@
                                 app:strokeWidth="2dp"
                                 app:strokeColor="@color/white"
                                 app:cardCornerRadius="10dp"
+                                android:layout_marginHorizontal="10dp"
                                 android:layout_marginVertical="10dp"
-                                android:layout_height="280dp">
+                                android:layout_height="250dp">
 
                                 <RelativeLayout
                                     android:layout_marginTop="10dp"
@@ -187,7 +192,7 @@
 
                                             android:src="@drawable/newbook"
                                             android:layout_width="match_parent"
-                                            android:layout_height="170dp"
+                                            android:layout_height="140dp"
                                             android:layout_marginVertical="10dp"
                                             android:padding="20dp"
                                             />
@@ -259,7 +264,7 @@
 
                         <LinearLayout
                             android:orientation="vertical"
-                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginHorizontal="5dp"
                             android:layout_width="300dp"
                             android:layout_height="wrap_content">
 
@@ -270,7 +275,7 @@
                                 app:strokeWidth="2dp"
                                 app:cardCornerRadius="10dp"
                                 android:layout_marginVertical="10dp"
-                                android:layout_height="280dp">
+                                android:layout_height="250dp">
 
                                 <RelativeLayout
                                     android:layout_marginTop="10dp"
@@ -285,7 +290,7 @@
                                         <ImageView
                                             android:src="@drawable/newbook"
                                             android:layout_width="match_parent"
-                                            android:layout_height="170dp"
+                                            android:layout_height="140dp"
                                             android:layout_marginVertical="10dp"
                                             android:padding="20dp"
                                             />
@@ -357,7 +362,7 @@
 
                         <LinearLayout
                             android:orientation="vertical"
-                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginHorizontal="5dp"
                             android:layout_width="300dp"
                             android:layout_height="wrap_content">
 
@@ -367,9 +372,9 @@
                                 app:strokeWidth="2dp"
                                 android:backgroundTint="@color/blue"
                                 app:cardCornerRadius="10dp"
-
+                                android:layout_marginHorizontal="10dp"
                                 android:layout_marginVertical="10dp"
-                                android:layout_height="280dp">
+                                android:layout_height="250dp">
 
                                 <RelativeLayout
                                     android:layout_marginTop="10dp"
@@ -384,7 +389,7 @@
 
                                             android:src="@drawable/newbook"
                                             android:layout_width="match_parent"
-                                            android:layout_height="170dp"
+                                            android:layout_height="140dp"
                                             android:layout_marginVertical="10dp"
                                             android:padding="20dp"
                                             />
@@ -457,7 +462,7 @@
                         <LinearLayout
                             android:orientation="vertical"
 
-                            android:layout_marginStart="20dp"
+                            android:layout_marginStart="5dp"
                             android:layout_marginEnd="100dp"
                             android:layout_width="300dp"
                             android:layout_height="wrap_content">
@@ -468,9 +473,9 @@
                                 app:strokeWidth="2dp"
                                 android:backgroundTint="@color/blue"
                                 app:cardCornerRadius="10dp"
-
+                                android:layout_marginHorizontal="10dp"
                                 android:layout_marginVertical="10dp"
-                                android:layout_height="280dp">
+                                android:layout_height="250dp">
 
                                 <RelativeLayout
                                     android:layout_marginTop="10dp"
@@ -486,7 +491,7 @@
 
                                             android:src="@drawable/newbook"
                                             android:layout_width="match_parent"
-                                            android:layout_height="170dp"
+                                            android:layout_height="140dp"
                                             android:layout_marginVertical="10dp"
                                             android:padding="20dp"
                                             />

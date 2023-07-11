@@ -143,21 +143,22 @@ class HomeFragment : Fragment() {
         }
 
         binding.perpustakaan.setOnClickListener {
-            findNavController().navigate(R.id.libFragment)
+            findNavController().navigate(R.id.action_homeFragment_to_libFragment)
         }
+
         binding.panduan.setOnClickListener {
-            findNavController().navigate(R.id.panduanFragment)
+            findNavController().navigate(R.id.action_homeFragment_to_panduanFragment)
         }
 
         binding.cardHistory.setOnClickListener {
-            findNavController().navigate(R.id.historyFragment)
+            findNavController().navigate(R.id.action_homeFragment_to_historyFragment)
         }
         binding.cardAkurasi.setOnClickListener {
-            findNavController().navigate(R.id.accuracyFragment)
+            findNavController().navigate(R.id.action_homeFragment_to_accuracyFragment)
         }
 
         binding.cardBatch.setOnClickListener {
-            findNavController().navigate(R.id.batchFragment)
+            findNavController().navigate(R.id.action_homeFragment_to_batchFragment)
         }
 
 

@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/rounded_dialog"
     android:minWidth="800dp"
+    android:backgroundTint="@color/blue"
     android:minHeight="460dp"
     android:orientation="vertical">
 
@@ -35,7 +36,6 @@
             android:text="Data Pengukuran"
             android:textColor="@color/white"
             android:textSize="20sp">
-
         </TextView>
 
         <ImageView
@@ -52,7 +52,7 @@
 
     <TextView
         android:text="Ukuran Sapi"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:layout_marginTop="40dp"
         android:layout_marginHorizontal="20dp"
@@ -68,10 +68,10 @@
         android:maxLength="3"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/rectangleedittext"
+        android:background="@drawable/rectangle_white_edit_text"
         android:hint="Lingkar Dada ( Cm )"
-        android:textColorHint="#80000000"
-        android:textColor="@color/black"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:padding="10dp">
     </EditText>
 
@@ -83,17 +83,16 @@
         android:inputType="number"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
-        android:textColorHint="#80000000"
-        android:background="@drawable/rectangleedittext"
+        android:textColorHint="@color/white"
+        android:background="@drawable/rectangle_white_edit_text"
         android:hint="Panjang Badan ( Cm )"
-
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:padding="10dp">
     </EditText>
 
     <TextView
         android:text="Jenis Sapi"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:layout_marginTop="40dp"
         android:layout_marginHorizontal="20dp"
@@ -109,8 +108,8 @@
         android:backgroundTint="@color/black"
         android:hint="Optional"
         android:layout_height="wrap_content"
-        android:textColorHint="@color/black"
-        app:endIconTint="@color/black"
+        android:textColorHint="@color/white"
+        app:endIconTint="@color/white"
         android:layout_gravity="center_horizontal"
         android:layout_marginHorizontal="20dp">
 
@@ -122,27 +121,38 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/rectangleedittext"
+            android:background="@drawable/rectangle_white_edit_text"
 
             android:singleLine="false"
             android:textColorHint="@color/black"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:padding="10dp">
         </AutoCompleteTextView>
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:alpha="0.5"
-        android:id="@+id/btnhitung"
-        android:backgroundTint="@color/blue"
-        android:layout_marginHorizontal="20dp"
-        android:textColor="@color/white"
-        android:layout_marginVertical="40dp"
-        android:text="Hitung"
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:backgroundTint="@color/blue"
+        app:strokeColor="@color/white"
+        app:strokeWidth="1dp"
 
-    </Button>
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="40dp"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:alpha="0.5"
+            android:id="@+id/btnhitung"
+            android:backgroundTint="@color/blue"
+            android:textColor="@color/white"
+            android:text="Hitung"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+        </Button>
+
+    </com.google.android.material.card.MaterialCardView>
+
 
 </LinearLayout>

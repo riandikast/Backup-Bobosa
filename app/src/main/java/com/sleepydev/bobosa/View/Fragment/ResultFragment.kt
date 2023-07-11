@@ -1,6 +1,7 @@
 package com.sleepydev.bobosa.View.Fragment
 
 import android.annotation.SuppressLint
+import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,8 +9,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
+import androidx.lifecycle.asLiveData
 import com.sleepydev.bobosa.Database.History
 import com.sleepydev.bobosa.Database.HistoryDB
+import com.sleepydev.bobosa.Datastore.StateManager
 
 import com.sleepydev.bobosa.View.Activity.MainActivity
 import com.sleepydev.bobosa.databinding.FragmentResultBinding
@@ -45,6 +48,22 @@ class ResultFragment : Fragment() {
         _binding = FragmentResultBinding.inflate(inflater, container, false)
         val view = binding.root
         (activity as MainActivity).refreshTitle()
+
+        val dataManager = StateManager(requireContext())
+        dataManager.tempState.asLiveData().observe(requireActivity()) {
+            if (it){
+                binding.parentHasil.setBackgroundColor(Color.parseColor("#262626"))
+                binding.topLine.setBackgroundColor(Color.parseColor("#262626"))
+                binding.bottomLine.setBackgroundColor(Color.parseColor("#262626"))
+            }else{
+                binding.parentHasil.setBackgroundColor(Color.parseColor("#ffffff"))
+                binding.topLine.setBackgroundColor(Color.parseColor("#ffffff"))
+                binding.bottomLine.setBackgroundColor(Color.parseColor("#ffffff"))
+
+            }
+        }
+
+
         val getLd = arguments?.getString("ld")
         val getPb = arguments?.getString("pb")
         val getSel = arguments?.getString("sel")
