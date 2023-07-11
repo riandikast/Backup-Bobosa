@@ -40,7 +40,7 @@ class PanduanFragment : Fragment() {
                 .setView(inputView)
                 .create()
             inputBinding.namaPanduan.text = "Mengukur Lingkar Dada"
-            inputBinding.isiPanduan.text = "Untuk mengukur lingkar dada bisa dilakukan dengan melingkarkan pita ukur pada bagian yang ditandai dengen angka 5 pada gambar di atas \n"
+            inputBinding.isiPanduan.text = "Untuk mengukur lingkar dada bisa dilakukan dengan melingkarkan pita ukur pada bagian yang ditandai dengan angka 5 pada gambar di atas \n"
             inputBinding.btnclose.setOnClickListener {
                 a.dismiss()
             }
