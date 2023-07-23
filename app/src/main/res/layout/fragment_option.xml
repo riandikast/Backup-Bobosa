@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-
     android:background="@color/blue"
     tools:context=".View.Fragment.HomeFragment">
 
@@ -59,11 +58,8 @@
                     android:layout_marginHorizontal="40dp"
                     android:background="@color/white"/>
 
-
-
-
-
             </LinearLayout>
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -91,6 +87,81 @@
                     android:textColor="@color/white"
 
                     tools:ignore="UseSwitchCompatOrMaterialXml" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:textColor="@color/white"
+                        android:textSize="22sp"
+                        android:layout_marginTop="20dp"
+                        android:text="Database"
+                        android:layout_marginHorizontal="50dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="40dp"
+                    android:background="@color/white"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/backupdb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="@color/white"
+                    android:layout_marginTop="25dp"
+                    android:textSize="18sp"
+                    android:layout_centerVertical="true"
+                    android:text="Backup"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/restoredb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="@color/white"
+                    android:layout_marginTop="15dp"
+                    android:textSize="18sp"
+                    android:layout_centerVertical="true"
+                    android:text="Restore"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
             </RelativeLayout>
 
 

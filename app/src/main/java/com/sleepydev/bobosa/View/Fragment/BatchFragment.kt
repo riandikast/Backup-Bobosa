@@ -1,5 +1,6 @@
 package com.sleepydev.bobosa.View.Fragment
 
+import android.content.Context
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
@@ -9,6 +10,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
@@ -36,6 +38,7 @@ import java.text.DecimalFormat
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.time.format.FormatStyle
+import kotlin.math.exp
 
 
 class BatchFragment : Fragment() {
@@ -43,6 +46,7 @@ class BatchFragment : Fragment() {
     private val binding get() = _binding!!
     lateinit var selected:String
     lateinit var hasil:String
+    lateinit var output2:String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,7 +66,7 @@ class BatchFragment : Fragment() {
         getBatch()
 
         ViewCompat.setNestedScrollingEnabled(binding.listBatch, false);
-        val rumus = listOf( "Schoorl Denmark", "Schoorl Indonesia", "Winter Eropa", "Winter Indonesia", "Arjodarmoko")
+        val rumus = listOf( "Schoorl Denmark", "Schoorl Indonesia", "Winter Eropa", "Winter Indonesia", "Lambourne", "Djagra", "Neural Network")
         val adapter = ArrayAdapter(requireActivity(), R.layout.list_rumus, rumus)
         binding.jenisoption.setDropDownBackgroundResource(R.color.lightgreen)
 
@@ -111,6 +115,8 @@ class BatchFragment : Fragment() {
 
                 val df = DecimalFormat("#.##")
                 df.roundingMode = RoundingMode.CEILING
+                val df2 = DecimalFormat("#.###")
+                df2.roundingMode = RoundingMode.CEILING
                 val sch =
                     ((ldData?.toInt()?.plus(22))?.times((ldData?.toInt()?.plus(22)!!)))?.toDouble()?.div(100)
                 val schID =
@@ -123,23 +129,52 @@ class BatchFragment : Fragment() {
                     (ldData?.toDouble()?.times(ldData.toDouble()))?.times(pbData!!.toDouble())?.div(10840)
                 val arjo =
                     ((ldData?.toDouble()?.times(ldData.toDouble()))?.times(pbData!!.toDouble()))?.div(10000)
+                val djagra =
+                    ((ldData?.toDouble()?.times(ldData.toDouble()))?.times(pbData!!.toDouble()))?.div(11045)
+
+
+                val ldNR = (ldData?.toDouble()?.minus(82))!!.div((160-82))
+                val pbNR = (pbData?.toDouble()?.minus(109))!!.div((170-109))
+                val bias = (0.1.times(0.1345)).plus(-0.7)
+                val weight1 = ((0.1.times(0.1345).times(0.37705)).plus(2.8))
+                val weight2 = ((0.1.times(0.1345).times(0)).plus(1.9))
+                val jumlah = pbNR?.times(weight1)!!.plus(ldNR!!.times(weight2)).plus(bias)
+                val output1 = (1.div((1+ exp(-jumlah))))
+                val dnrOutput1 = output1.times((266.toDouble().plus(70)))
+                val err1 = -0.30177341
+                if (err1 < 0){
+
+                    output2 = (output1.plus(err1)).toString()
+                }else{
+                    output2 = (output1.minus(-err1).toString())
+                }
+                val dnrOutput2 = output2.toDouble().times((266.toDouble().plus(70)))
 
 
                 if (selected == "Schoorl Denmark"){
-                    hasil = df.format(sch)
+                    hasil = df2.format(sch)
                 }
                 if (selected == "Schoorl Indonesia"){
-                    hasil = df.format(schID)
+                    hasil = df2.format(schID)
                 }
                 if (selected == "Winter Eropa"){
-                    hasil = df.format(wEuropeToKg)
+                    hasil = df2.format(wEuropeToKg)
                 }
                 if (selected == "Winter Indonesia"){
-                    hasil = df.format(wID)
+                    hasil = df2.format(wID)
                 }
-                if (selected == "Arjodarmoko"){
-                    hasil = df.format(arjo)
+                if (selected == "Lambourne"){
+                    hasil = df2.format(lamb)
                 }
+                if (selected == "Djagra"){
+                    hasil = df2.format(djagra)
+                }
+                if (selected == "Neural Network"){
+                    hasil = df2.format(dnrOutput1)
+                }
+
+
+                it.hideKeyboard()
                 val db = HistoryDB.getInstance(requireContext())
                 GlobalScope.async {
                     db?.BatchDao()?.insertBatch(
@@ -213,6 +248,11 @@ class BatchFragment : Fragment() {
                 }
             }
         }
+    }
+
+    fun View.hideKeyboard() {
+        val inputManager = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputManager.hideSoftInputFromWindow(windowToken, 0)
     }
 
 

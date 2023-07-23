@@ -1,119 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-
     android:background="@color/blue"
-    tools:context=".View.Fragment.HomeFragment">
+    android:minWidth="800dp"
+    android:minHeight="360dp"
+    android:orientation="vertical">
 
-    <androidx.core.widget.NestedScrollView
+    <RelativeLayout
+
+        android:background="@drawable/rounded_dialog2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/btninputnote"
+            android:layout_alignParentEnd="true"
+            android:paddingVertical="12dp"
+            android:layout_marginEnd="-20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/btnclose"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/close"
+            android:paddingVertical="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="-20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_marginBottom="50dp"
+            android:background="@color/blue"
+            android:layout_marginBottom="20dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
+
+
 
             <TextView
-                android:text="Ukuran Sapi"
+
                 android:textColor="@color/white"
-                android:textSize="18sp"
+                android:text="Data Sapi"
                 android:layout_marginTop="5dp"
-                android:layout_marginHorizontal="20dp"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
             </TextView>
 
-            <EditText
-                android:id="@+id/inputlingkardada"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:inputType="number"
-                android:maxLength="3"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/rectangle_white_edit_text"
-                android:hint="Lingkar Dada ( Cm )"
-                android:textColorHint="@color/white"
-                android:textColor="@color/white"
-                android:padding="10dp">
-            </EditText>
-
-            <EditText
-                android:id="@+id/inputpanjangbadan"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:maxLength="3"
-                android:inputType="number"
-                android:layout_marginHorizontal="20dp"
+            <View
                 android:layout_marginTop="20dp"
-                android:textColorHint="@color/white"
-                android:background="@drawable/rectangle_white_edit_text"
-                android:hint="Panjang Badan ( Cm )"
-
-                android:textColor="@color/white"
-                android:padding="10dp">
-            </EditText>
-
-            <TextView
-                android:text="Bobot Badan Aktual"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:layout_marginTop="40dp"
-                android:layout_marginHorizontal="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-            </TextView>
-
-            <EditText
-                android:id="@+id/inputbobotaktual"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:maxLength="4"
-                android:inputType="number"
+                android:layout_height="2dp"
                 android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="10dp"
-                android:textColorHint="@color/white"
-                android:background="@drawable/rectangle_white_edit_text"
-                android:hint="Bobot badan ( Kg )"
+                android:background="@color/white"/>
 
-                android:textColor="@color/white"
-                android:padding="10dp">
-            </EditText>
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:backgroundTint="@color/blue"
-                app:strokeColor="@color/white"
-                app:strokeWidth="1dp"
-                android:layout_marginHorizontal="20dp"
+            <RelativeLayout
                 android:layout_marginTop="30dp"
-                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <Button
-
-                    android:id="@+id/btnhitung"
-                    android:backgroundTint="@color/blue"
+                <TextView
+                    android:id="@+id/lingkardadatext"
                     android:textColor="@color/white"
-                    android:text="Hitung"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp">
+                    android:text="Lingkar Dada"
+                    android:textSize="18sp"
+                    android:layout_marginStart="30dp"
+                    android:layout_gravity="start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
-                </Button>
+                </TextView>
 
-            </com.google.android.material.card.MaterialCardView>
+                <TextView
+                    android:id="@+id/datalingkardada"
+                    android:textColor="@color/white"
+                    android:text="18cm"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/panjangbadantext"
+                    android:textColor="@color/white"
+                    android:text="Panjang Badan"
+                    android:textSize="18sp"
+                    android:layout_marginStart="30dp"
+                    android:layout_gravity="start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/datapanjangbadan"
+                    android:textColor="@color/white"
+                    android:text="20cm"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/databbtext"
+                    android:textColor="@color/white"
+                    android:text="Bobot Badan"
+                    android:textSize="18sp"
+                    android:layout_marginStart="30dp"
+                    android:layout_gravity="start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/bbvalue"
+                    android:textColor="@color/white"
+                    android:text="-"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+            </RelativeLayout>
 
 
             <LinearLayout
                 android:layout_marginBottom="30dp"
                 android:orientation="vertical"
+                android:layout_marginTop="40dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -146,7 +203,7 @@
                         android:id="@+id/schoorltitle"
                         android:textColor="@color/white"
                         android:text="Schoorl Denmark"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:layout_marginStart="30dp"
                         android:layout_gravity="start"
                         android:layout_width="wrap_content"
@@ -170,7 +227,7 @@
                         android:id="@+id/schoorlvalue"
                         android:textColor="@color/white"
                         android:text="0%"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:layout_marginEnd="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_width="wrap_content"
@@ -189,7 +246,7 @@
                         android:id="@+id/schoorlIDtitle"
                         android:textColor="@color/white"
                         android:text="Schoorl Indonesia"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:layout_marginStart="30dp"
                         android:layout_gravity="start"
                         android:layout_width="wrap_content"
@@ -212,7 +269,7 @@
                         android:id="@+id/schoorlIDvalue"
                         android:textColor="@color/white"
                         android:text="0%"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:layout_marginEnd="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_width="wrap_content"
@@ -231,7 +288,7 @@
                         android:id="@+id/wintertitle"
                         android:textColor="@color/white"
                         android:text="Winter Eropa"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:layout_marginStart="30dp"
                         android:layout_gravity="start"
                         android:layout_width="wrap_content"
@@ -254,7 +311,7 @@
                         android:id="@+id/wintervalue"
                         android:textColor="@color/white"
                         android:text="0%"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:layout_marginEnd="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_width="wrap_content"
@@ -273,7 +330,7 @@
                         android:id="@+id/winterIDtitle"
                         android:textColor="@color/white"
                         android:text="Winter Indonesia"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:layout_marginStart="30dp"
                         android:layout_gravity="start"
                         android:layout_width="wrap_content"
@@ -295,7 +352,7 @@
                         android:id="@+id/winterIDvalue"
                         android:textColor="@color/white"
                         android:text="0%"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:layout_marginEnd="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_width="wrap_content"
@@ -313,7 +370,7 @@
                         android:id="@+id/lambournetitle"
                         android:textColor="@color/white"
                         android:text="Lambourne"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:layout_marginStart="30dp"
                         android:layout_gravity="start"
                         android:layout_width="wrap_content"
@@ -336,7 +393,7 @@
                         android:id="@+id/lambournevalue"
                         android:textColor="@color/white"
                         android:text="0%"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:layout_marginEnd="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_width="wrap_content"
@@ -356,7 +413,7 @@
                         android:textColor="@color/white"
                         android:text="Djagra"
                         android:maxLines="2"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:layout_toStartOf="@id/djagravalue"
                         android:layout_alignParentStart="true"
                         android:layout_marginStart="30dp"
@@ -369,7 +426,7 @@
                         android:id="@+id/djagravalue"
                         android:textColor="@color/white"
                         android:text="0%"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:gravity="end
 "                       android:layout_marginStart="40dp"
                         android:layout_marginEnd="30dp"
@@ -391,7 +448,7 @@
                         android:textColor="@color/white"
                         android:text="Neural Network"
                         android:maxLines="2"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:layout_toStartOf="@id/neuralvalue"
                         android:layout_alignParentStart="true"
                         android:layout_marginStart="30dp"
@@ -404,7 +461,7 @@
                         android:id="@+id/neuralvalue"
                         android:textColor="@color/white"
                         android:text="0%"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:gravity="end
 "                       android:layout_marginStart="40dp"
                         android:layout_marginEnd="30dp"
@@ -422,88 +479,8 @@
             </LinearLayout>
 
 
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/title"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:layout_marginTop="20dp"
-                        android:text="Riwayat Test"
-                        android:layout_marginHorizontal="50dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                    </TextView>
-
-                    <ImageView
-                        android:id="@+id/delete_icon"
-                        android:layout_marginEnd="50dp"
-                        android:src="@drawable/trash_icon"
-                        android:layout_alignParentEnd="true"
-                        android:layout_width="23dp"
-                        android:layout_marginTop="23dp"
-
-                        android:layout_height="23dp">
-
-                    </ImageView>
-                </RelativeLayout>
-
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:layout_marginVertical="5dp"
-                    android:layout_marginHorizontal="40dp"
-                    android:background="@color/white"/>
-
-
-                <FrameLayout
-                    android:layout_gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:layout_marginVertical="100dp"
-                        android:layout_gravity="center"
-                        android:textSize="20sp"
-                        android:textColor="@color/white"
-                        android:gravity="center"
-                        android:text="Belum ada data"
-                        android:id="@+id/checkdata"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        >
-
-                    </TextView>
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/list_acc"
-                        android:nestedScrollingEnabled="false"
-                        android:layout_marginBottom="30dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginHorizontal="30dp"
-                        android:layout_marginTop="20dp">
-
-
-                    </androidx.recyclerview.widget.RecyclerView>
-
-
-                </FrameLayout>
-
-
-
-            </LinearLayout>
         </LinearLayout>
-
-    </androidx.core.widget.NestedScrollView>
-
+    </LinearLayout>
 
 </LinearLayout>

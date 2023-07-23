@@ -100,7 +100,7 @@ class HomeFragment : Fragment() {
             inputBinding.inputlingkardada.addTextChangedListener(textWatcher)
             inputBinding.inputpanjangbadan.addTextChangedListener(textWatcher)
 
-            val jenis = listOf( "Peranakan Ongole (PO)", "Bali Jantan", "Bali Betina")
+            val jenis = listOf( "Peranakan Ongole (PO)", "Kupang", "Bali")
             val adapter = ArrayAdapter(requireActivity(), R.layout.list_jenis, jenis)
             inputBinding.jenisoption.setDropDownBackgroundResource(R.color.lightgreen)
             inputBinding.jenisoption.setAdapter(adapter)
@@ -136,7 +136,6 @@ class HomeFragment : Fragment() {
                     a.dismiss()
                     findNavController().navigate(R.id.resultFragment, bundle)
                 }
-
 
             }
             a.show()

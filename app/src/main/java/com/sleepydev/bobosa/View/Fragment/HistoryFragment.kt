@@ -53,7 +53,6 @@ class HistoryFragment : Fragment() {
             deleteBinding.continuedelete.setOnClickListener {
                 GlobalScope.async {
                     val db = HistoryDB.getInstance(requireContext())
-
                     db?.HistoryDao()?.deleteHistory()
 
 

@@ -19,6 +19,8 @@ data class History(
     @ColumnInfo(name = "we") var winter_eropa: String,
     @ColumnInfo(name = "wi") var winter_indonesia: String,
     @ColumnInfo(name = "ar") var arjo: String,
+    @ColumnInfo(name = "djagra") var djagra: String,
+    @ColumnInfo(name = "nn") var neural_network: String,
     @ColumnInfo(name = "time") var waktu: String,
     @ColumnInfo(name = "rekomendasi") var rec: String,
 ): Parcelable

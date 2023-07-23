@@ -1,5 +1,6 @@
 package com.sleepydev.bobosa.View.Activity
 
+import android.content.Context
 import android.graphics.Color
 import android.graphics.PorterDuff
 import androidx.appcompat.app.AppCompatActivity
@@ -22,6 +23,7 @@ import com.sleepydev.bobosa.Datastore.StateManager
 import com.sleepydev.bobosa.R
 import com.sleepydev.bobosa.databinding.ActivityMainBinding
 import com.sleepydev.bobosa.databinding.FragmentHomeBinding
+import android.view.inputmethod.InputMethodManager
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
@@ -127,4 +129,6 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+
 }

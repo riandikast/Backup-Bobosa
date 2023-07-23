@@ -70,6 +70,7 @@ class LibFragment : Fragment() {
 
             a.show()
         }
+
         binding.lihatWID.setOnClickListener {
             val inputBinding = RumusDialogBinding.inflate(inflater, container, false)
             val inputView = inputBinding.root
@@ -84,14 +85,30 @@ class LibFragment : Fragment() {
 
             a.show()
         }
+
         binding.lihatArjo.setOnClickListener {
             val inputBinding = RumusDialogBinding.inflate(inflater, container, false)
             val inputView = inputBinding.root
             val a = AlertDialog.Builder(requireContext())
                 .setView(inputView)
                 .create()
-            inputBinding.namaRumus.text = "Rumus Arjodarmoko"
-            inputBinding.gambarRumus.setImageResource(R.drawable.rumus_arjo)
+            inputBinding.namaRumus.text = "Rumus Lambourne"
+            inputBinding.gambarRumus.setImageResource(R.drawable.rumus_lambourne)
+            inputBinding.btnclose.setOnClickListener {
+                a.dismiss()
+            }
+
+            a.show()
+        }
+
+        binding.lihatdjagra.setOnClickListener {
+            val inputBinding = RumusDialogBinding.inflate(inflater, container, false)
+            val inputView = inputBinding.root
+            val a = AlertDialog.Builder(requireContext())
+                .setView(inputView)
+                .create()
+            inputBinding.namaRumus.text = "Rumus Djagra"
+            inputBinding.gambarRumus.setImageResource(R.drawable.rumus_djagra)
             inputBinding.btnclose.setOnClickListener {
                 a.dismiss()
             }

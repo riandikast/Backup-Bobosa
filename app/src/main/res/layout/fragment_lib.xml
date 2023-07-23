@@ -463,6 +463,107 @@
 
                         <LinearLayout
                             android:orientation="vertical"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="match_parent"
+                                app:strokeColor="@color/white"
+                                app:strokeWidth="2dp"
+                                android:backgroundTint="@color/blue"
+                                app:cardCornerRadius="10dp"
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_marginVertical="10dp"
+                                android:layout_height="250dp">
+
+                                <RelativeLayout
+                                    android:layout_marginTop="10dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <ImageView
+
+                                            android:src="@drawable/compressed_newbook"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="140dp"
+                                            android:layout_marginVertical="10dp"
+                                            android:padding="20dp"
+                                            />
+
+                                        <TextView
+                                            android:textColor="@color/white"
+                                            android:textSize="20sp"
+                                            android:layout_marginTop="5dp"
+                                            android:layout_gravity="center_horizontal"
+                                            android:layout_width="wrap_content"
+                                            android:text="Rumus Lambourne "
+                                            android:layout_height="wrap_content">
+                                        </TextView>
+
+
+
+
+                                    </LinearLayout>
+
+
+
+                                </RelativeLayout>
+
+
+
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="match_parent"
+                                android:id="@+id/lihatArjo"
+                                android:layout_marginTop="-40dp"
+                                android:translationZ="100dp"
+                                app:strokeColor="@color/white"
+                                app:strokeWidth="2dp"
+                                android:background="@drawable/shadow_background"
+                                android:layout_marginHorizontal="60dp"
+                                app:cardCornerRadius="15dp"
+                                android:layout_height="50dp">
+
+                                <LinearLayout
+                                    android:background="@color/blue"
+                                    android:layout_alignParentBottom="true"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp">
+
+                                    <ImageView
+                                        android:src="@drawable/newopenbook"
+                                        android:layout_width="60dp"
+
+                                        android:layout_height="match_parent"
+                                        android:padding="12dp"
+                                        />
+
+                                    <TextView
+                                        android:layout_gravity="center_vertical"
+                                        android:textColor="@color/white"
+                                        android:text="Lihat Rumus"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+
+                                    </TextView>
+                                </LinearLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
 
                             android:layout_marginStart="5dp"
                             android:layout_marginEnd="100dp"
@@ -504,7 +605,7 @@
                                             android:layout_marginTop="5dp"
                                             android:layout_gravity="center_horizontal"
                                             android:layout_width="wrap_content"
-                                            android:text="Rumus Arjodarmoko "
+                                            android:text="Rumus Djagra"
                                             android:layout_height="wrap_content">
                                         </TextView>
 
@@ -524,7 +625,7 @@
 
                             <com.google.android.material.card.MaterialCardView
                                 android:layout_width="match_parent"
-                                android:id="@+id/lihatArjo"
+                                android:id="@+id/lihatdjagra"
                                 android:layout_marginTop="-40dp"
                                 android:translationZ="100dp"
                                 app:strokeColor="@color/white"

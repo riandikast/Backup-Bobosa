@@ -9,10 +9,11 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [History::class, Batch::class], version = 4)
+@Database(entities = [History::class, Batch::class, Accuracy::class], version = 5)
 abstract class HistoryDB: RoomDatabase() {
     abstract  fun HistoryDao(): HistoryDao
     abstract  fun BatchDao(): BatchDao
+    abstract  fun AccuracyDao(): AccuracyDao
     companion object{
         private var INSTANCE : HistoryDB? = null
         fun getInstance(context: Context): HistoryDB?{

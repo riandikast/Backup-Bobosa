@@ -28,11 +28,15 @@ import java.io.File
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.time.format.FormatStyle
+import kotlin.math.exp
 
 class ResultFragment : Fragment() {
     private var _binding: FragmentResultBinding? = null
     private val binding get() = _binding!!
     lateinit var rekomendasi: String
+    lateinit var minValue : String
+    lateinit var maxValue : String
+    lateinit var output2 : String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -84,26 +88,26 @@ class ResultFragment : Fragment() {
         val getJenis = binding.jenissapi.text.toString()
 
         if (getJenis == "Peranakan Ongole (PO)") {
-            val rec = "Untuk sapi jenis Peranakan Ongole (PO) disarankan menggunakan hasil dari rumus Arjodarmoko \n"
+            val rec = "Untuk sapi jenis Peranakan Ongole (PO) disarankan menggunakan hasil dari rumus Winter Eropa \n"
 //            binding.starsarjo.visibility = View.VISIBLE
-            binding.lambournetitle.setTextColor(Color.parseColor("#ffca3a"))
+//            binding.wintertitle.setTextColor(Color.parseColor("#ffca3a"))
             binding.rekomenval.text = rec
             rekomendasi = rec
 
         }
 
-        if (getJenis == "Bali Jantan") {
-            val rec = "Untuk sapi jenis Bali Jantan disarankan menggunakan hasil dari rumus Winter Indonesia \n"
+        if (getJenis == "Kupang") {
+            val rec = "Untuk sapi jenis Kupang disarankan menggunakan hasil dari rumus Winter Eropa \n"
 //            binding.starswid.visibility = View.VISIBLE
-            binding.winterIDtitle.setTextColor(Color.parseColor("#ffca3a"))
+//            binding.wintertitle.setTextColor(Color.parseColor("#ffca3a"))
             binding.rekomenval.text = rec
             rekomendasi = rec
         }
 
-        if (getJenis == "Bali Betina") {
-            val rec = "Untuk sapi jenis Bali Betina disarankan menggunakan hasil dari rumus School Denmark \n"
+        if (getJenis == "Bali") {
+            val rec = "Untuk sapi jenis Bali disarankan menggunakan hasil dari rumus Winter Indonesia \n"
 //            binding.starsdenm.visibility = View.VISIBLE
-            binding.schoorltitle.setTextColor(Color.parseColor("#ffca3a"))
+//            binding.winterIDtitle.setTextColor(Color.parseColor("#ffca3a"))
             binding.rekomenval.text = rec
             rekomendasi = rec
 
@@ -119,6 +123,12 @@ class ResultFragment : Fragment() {
 
         val df = DecimalFormat("#.##")
         df.roundingMode = RoundingMode.CEILING
+
+        val df2 = DecimalFormat("#.###")
+        df2.roundingMode = RoundingMode.CEILING
+        val formattedLDInch = (df2.format(ldInch)).toDouble()
+        val formattedPBInch = (df2.format(pbInch)).toDouble()
+
         val sch =
             ((getLd?.toInt()?.plus(22))?.times((getLd?.toInt()?.plus(22)!!)))?.toDouble()?.div(100)
         val schID =
@@ -131,14 +141,38 @@ class ResultFragment : Fragment() {
             (getLd?.toDouble()?.times(getLd.toDouble()))?.times(getPb!!.toDouble())?.div(10840)
         val arjo =
             ((getLd?.toDouble()?.times(getLd.toDouble()))?.times(getPb!!.toDouble()))?.div(10000)
-
+        val djagra =
+            ((getLd?.toDouble()?.times(getLd.toDouble()))?.times(getPb!!.toDouble()))?.div(11045)
 
         val lambToKg = lamb?.div(2.205)
-        binding.schoorlvalue.text = "${df.format(sch)} Kg"
-        binding.schoorlIDvalue.text = "${df.format(schID)} Kg"
-        binding.wintervalue.text = "${df.format(wEuropeToKg)} Kg"
-        binding.winterIDvalue.text = "${df.format(wID)} Kg"
-        binding.lambournevalue.text = "${df.format(arjo)} Kg"
+
+
+
+
+        val ldNR = (getLd?.toDouble()?.minus(82))!!.div((160-82))
+        val pbNR = (getPb?.toDouble()?.minus(109))!!.div((170-109))
+        val bias = (0.1.times(0.1345)).plus(-0.7)
+        val weight1 = ((0.1.times(0.1345).times(0.37705)).plus(2.8))
+        val weight2 = ((0.1.times(0.1345).times(0)).plus(1.9))
+        val jumlah = pbNR?.times(weight1)!!.plus(ldNR!!.times(weight2)).plus(bias)
+        val output1 = (1.div((1+ exp(-jumlah))))
+        val dnrOutput1 = output1.times((266.toDouble().plus(70)))
+        val err1 = -0.30177341
+        if (err1 < 0){
+
+           output2 = (output1.plus(err1)).toString()
+        }else{
+            output2 = (output1.minus(-err1).toString())
+        }
+        val dnrOutput2 = output2.toDouble().times((266.toDouble().plus(70)))
+
+        binding.schoorlvalue.text = "${df2.format(sch)} Kg"
+        binding.schoorlIDvalue.text = "${df2.format(schID)} Kg"
+        binding.wintervalue.text = "${df2.format(wEuropeToKg)} Kg"
+        binding.winterIDvalue.text = "${df2.format(wID)} Kg"
+        binding.lambournevalue.text = "${df2.format(lamb)} Kg"
+        binding.djagravalue.text = "${df2.format(djagra)} Kg"
+        binding.neuralvalue.text = "${df2.format(dnrOutput1)} Kg"
 
         val current = LocalDateTime.now()
         val formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)
@@ -152,11 +186,13 @@ class ResultFragment : Fragment() {
                     "$getLd",
                     "$getPb",
                     "$getJenis",
-                    "${df.format(sch)} Kg",
-                    "${df.format(schID)} Kg",
-                    "${df.format(wEuropeToKg)} Kg",
-                    "${df.format(wID)} Kg",
-                    "${df.format(arjo)} Kg",
+                    "${df2.format(sch)} Kg",
+                    "${df2.format(schID)} Kg",
+                    "${df2.format(wEuropeToKg)} Kg",
+                    "${df2.format(wID)} Kg",
+                    "${df2.format(lamb)} Kg",
+                    "${df2.format(djagra)} Kg",
+                    "${df2.format(dnrOutput1)} Kg",
                     "$formatted",
                     "$rekomendasi"
                 )
