@@ -19,9 +19,11 @@ import androidx.core.content.ContextCompat
 import androidx.documentfile.provider.DocumentFile
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.asLiveData
+import androidx.navigation.findNavController
 import com.sleepydev.bobosa.Database.BackupTime
 import com.sleepydev.bobosa.Database.HistoryDB
 import com.sleepydev.bobosa.Datastore.StateManager
+import com.sleepydev.bobosa.R
 import com.sleepydev.bobosa.View.Activity.MainActivity
 import com.sleepydev.bobosa.databinding.DatabaseDialogBinding
 import com.sleepydev.bobosa.databinding.FragmentOptionBinding
@@ -35,6 +37,7 @@ import java.io.OutputStream
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.time.format.FormatStyle
+import kotlin.properties.Delegates
 
 
 class OptionFragment : Fragment() {
@@ -43,6 +46,9 @@ class OptionFragment : Fragment() {
     private val binding get() = _binding!!
     var checkFile = 0
     var valid = true
+    var firstRefresh by Delegates.notNull<Boolean>()
+    lateinit var backupBinding : DatabaseDialogBinding
+    lateinit var a : AlertDialog
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -60,7 +66,7 @@ class OptionFragment : Fragment() {
         dataManager.tempState.asLiveData().observe(requireActivity()) {
            binding.switch1.isChecked = it
         }
-
+        firstRefresh = false
         binding.switch1.setOnCheckedChangeListener{ _, isChecked ->
 
             if (binding.switch1.isChecked) {
@@ -77,9 +83,10 @@ class OptionFragment : Fragment() {
         }
 
         binding.backupdb.setOnClickListener {
-            val backupBinding = DatabaseDialogBinding.inflate(inflater, container, false)
+
+            backupBinding = DatabaseDialogBinding.inflate(inflater, container, false)
             val inputView = backupBinding.root
-            val a = AlertDialog.Builder(requireContext())
+            a = AlertDialog.Builder(requireContext())
                 .setView(inputView)
                 .create()
 
@@ -97,16 +104,10 @@ class OptionFragment : Fragment() {
                 a.dismiss()
             }
             backupBinding.lanjutkan.setOnClickListener {
-                setupPermissions()
-                GlobalScope.async {
-                    val database = HistoryDB.getInstance(requireContext())
-                    val getBackup = database?.HistoryDao()?.getBackupTime()
-                    if (getBackup?.time == null) {
-                        backupBinding.backuptime.text = "Last Backup: \n None"
-                    } else {
-                        backupBinding.backuptime.text = "Last Backup: \n ${getBackup?.time}"
-                    }
-                }
+                setupPermissions(backupBinding)
+                refreshLastBackup(backupBinding)
+
+
             }
 
             a.show()
@@ -220,12 +221,23 @@ class OptionFragment : Fragment() {
         return  view
     }
 
-    private fun setupPermissions() {
+    private fun refreshLastBackup(backupBinding:DatabaseDialogBinding){
+        GlobalScope.async {
+            val database = HistoryDB.getInstance(requireContext())
+            val getBackup = database?.HistoryDao()?.getBackupTime()
+            if (getBackup?.time == null) {
+                backupBinding.backuptime.text = "Last Backup: \n None"
+            } else {
+                backupBinding.backuptime.text = "Last Backup: \n ${getBackup?.time}"
+            }
+        }
+    }
+    private fun setupPermissions(backupBinding:DatabaseDialogBinding) {
         val permission = ContextCompat.checkSelfPermission(requireContext(),
             android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
 
         if (permission != PackageManager.PERMISSION_GRANTED) {
-            makeRequest()
+            makeRequest(backupBinding)
         }else{
             val current = LocalDateTime.now()
 
@@ -251,11 +263,14 @@ class OptionFragment : Fragment() {
             File(wal!!).copyTo(File(documentFolder, "History.db-wal"), true)
             File(shm!!).copyTo(File(documentFolder, "History.db-shm"), true)
 
+
+
         }
     }
 
-    private fun makeRequest() {
+    private fun makeRequest(backupBinding:DatabaseDialogBinding) {
         requestPermissionLauncher.launch(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+
     }
 
 
@@ -264,11 +279,15 @@ class OptionFragment : Fragment() {
     ) { isGranted ->
         if (isGranted) {
             // PERMISSION GRANTED
+            firstRefresh = true
+            a.dismiss()
+
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 val current = LocalDateTime.now()
 
                 val formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)
                 val formatted = current.format(formatter)
+
                 Toast.makeText(requireContext(), "Backup Successfully", Toast.LENGTH_LONG).show()
                 val database = HistoryDB.getInstance(requireContext())
                 GlobalScope.launch {
@@ -311,6 +330,7 @@ class OptionFragment : Fragment() {
             Toast.makeText(requireContext(), "Permissions Denied", Toast.LENGTH_LONG).show()
 
         }
+
     }
 
     private fun restartApp(){
