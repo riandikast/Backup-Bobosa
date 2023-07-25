@@ -16,4 +16,12 @@ interface HistoryDao {
 
     @Query("DELETE FROM History")
     fun deleteHistory():Void
+
+    @Insert
+    fun insertBackupTime(backup: BackupTime) :Long
+    @Query("DELETE FROM backup_time")
+    fun deleteBackupTime() :Int
+
+    @Query("SELECT *  FROM backup_time")
+    fun getBackupTime():BackupTime
 }

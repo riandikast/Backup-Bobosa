@@ -5,9 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
+import androidx.lifecycle.asLiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.sleepydev.bobosa.Database.History
 import com.sleepydev.bobosa.Database.HistoryDB
+import com.sleepydev.bobosa.Datastore.StateManager
+import com.sleepydev.bobosa.View.Activity.MainActivity
 import com.sleepydev.bobosa.databinding.AdapterHistoryBinding
 import com.sleepydev.bobosa.databinding.DialogDetailHistoryBinding
 import com.sleepydev.bobosa.databinding.InputDialogBinding
@@ -28,6 +31,8 @@ data class AdapterHistory(var listHis: List<History>):RecyclerView.Adapter<Adapt
     }
 
     override fun onBindViewHolder( holder: ViewHolder, position: Int) {
+
+
         val db = HistoryDB.getInstance(holder.itemView.context)
         binding.est.text = listHis[position].jenis_sapi
         binding.timeEst.text = listHis[position].waktu
@@ -73,10 +78,12 @@ data class AdapterHistory(var listHis: List<History>):RecyclerView.Adapter<Adapt
     }
 
     override fun getItemCount(): Int {
+
         return listHis.size
     }
 
     override fun getItemViewType(position: Int): Int {
+
         return position
     }
 

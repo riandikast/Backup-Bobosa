@@ -88,7 +88,7 @@ class ResultFragment : Fragment() {
         val getJenis = binding.jenissapi.text.toString()
 
         if (getJenis == "Peranakan Ongole (PO)") {
-            val rec = "Untuk sapi jenis Peranakan Ongole (PO) disarankan menggunakan hasil dari rumus Winter Eropa \n"
+            val rec = "Berdasarkan hasil observasi, untuk sapi jenis Peranakan Ongole (PO) disarankan menggunakan pendekatan rumus Winter Eropa \n"
 //            binding.starsarjo.visibility = View.VISIBLE
 //            binding.wintertitle.setTextColor(Color.parseColor("#ffca3a"))
             binding.rekomenval.text = rec
@@ -97,7 +97,7 @@ class ResultFragment : Fragment() {
         }
 
         if (getJenis == "Kupang") {
-            val rec = "Untuk sapi jenis Kupang disarankan menggunakan hasil dari rumus Winter Eropa \n"
+            val rec = "Berdasarkan hasil observasi, untuk sapi jenis Kupang disarankan menggunakan pendekatan rumus Winter Eropa \n"
 //            binding.starswid.visibility = View.VISIBLE
 //            binding.wintertitle.setTextColor(Color.parseColor("#ffca3a"))
             binding.rekomenval.text = rec
@@ -105,7 +105,7 @@ class ResultFragment : Fragment() {
         }
 
         if (getJenis == "Bali") {
-            val rec = "Untuk sapi jenis Bali disarankan menggunakan hasil dari rumus Winter Indonesia \n"
+            val rec = "Berdasarkan jurnal penelitian dan hasil observasi, untuk sapi jenis Bali disarankan menggunakan pendekatan rumus Winter Indonesia \n"
 //            binding.starsdenm.visibility = View.VISIBLE
 //            binding.winterIDtitle.setTextColor(Color.parseColor("#ffca3a"))
             binding.rekomenval.text = rec

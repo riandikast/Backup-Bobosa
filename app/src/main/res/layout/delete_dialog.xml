@@ -43,45 +43,83 @@
 
             </TextView>
 
-            <RelativeLayout
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_gravity="end"
-                android:layout_marginEnd="50dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="30dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
 
-                <TextView
+                <com.google.android.material.card.MaterialCardView
                     android:id="@+id/canceldelete"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="20dp"
-                    android:textSize="20sp"
-                    android:textColor="@color/white"
-                    android:text="Tidak"
+                    android:translationZ="100dp"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="2dp"
+                    android:padding="3dp"
                     android:layout_marginBottom="30dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:background="@drawable/shadow_background"
+                    android:layout_marginHorizontal="10dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_width="80dp"
+                    android:layout_height="35dp">
 
-                </TextView>
+                    <LinearLayout
+                        android:background="@color/blue"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp">
 
-                <TextView
-                    android:layout_marginBottom="30dp"
-                    android:textSize="20sp"
-                    android:textColor="@color/red"
-                    android:layout_marginStart="40dp"
+                        <TextView
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/white"
+                            android:text="Tidak"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
                     android:id="@+id/continuedelete"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="20dp"
-                    android:backgroundTint="@color/red"
-                    android:text="Ya"
-                    android:layout_toEndOf="@id/canceldelete"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:translationZ="100dp"
+                    app:strokeColor="@color/red"
+                    app:strokeWidth="2dp"
+                    android:padding="3dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/shadow_background"
+                    android:layout_marginHorizontal="10dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_width="80dp"
+                    android:layout_height="35dp">
 
-                </TextView>
+                    <LinearLayout
+                        android:background="@color/blue"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp">
+
+                        <TextView
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/red"
+                            android:text="Ya"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
 
 
-            </RelativeLayout>
+            </LinearLayout>
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
