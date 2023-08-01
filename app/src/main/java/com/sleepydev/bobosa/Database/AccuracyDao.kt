@@ -9,9 +9,9 @@ interface AccuracyDao {
     @Insert
     fun insertAcc(acc: Accuracy) :Long
 
-    @Query("SELECT *  FROM Accuracy")
+    @Query("SELECT *  FROM akurasi")
     fun getAllAccy(): List<Accuracy>
 
-    @Query("DELETE FROM Accuracy")
+    @Query("DELETE FROM akurasi")
     fun deleteAcc():Void
 }

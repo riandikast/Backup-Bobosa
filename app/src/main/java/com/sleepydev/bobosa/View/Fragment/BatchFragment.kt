@@ -170,7 +170,7 @@ class BatchFragment : Fragment() {
                     hasil = df2.format(djagra)
                 }
                 if (selected == "Neural Network"){
-                    hasil = df2.format(dnrOutput1)
+                    hasil = df2.format(dnrOutput2)
                 }
 
 

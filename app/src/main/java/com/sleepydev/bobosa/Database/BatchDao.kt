@@ -10,9 +10,9 @@ interface BatchDao {
     @Insert
     fun insertBatch(batch: Batch) :Long
 
-    @Query("SELECT *  FROM Batch")
+    @Query("SELECT *  FROM estimasi_tunggal")
     fun getAllBatch(): List<Batch>
 
-    @Query("DELETE FROM Batch")
+    @Query("DELETE FROM estimasi_tunggal")
     fun deleteBatch():Void
 }

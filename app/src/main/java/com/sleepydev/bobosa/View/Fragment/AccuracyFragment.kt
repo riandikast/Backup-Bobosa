@@ -146,7 +146,7 @@ class AccuracyFragment : Fragment() {
                 val arjoAcc = ((arjo?.minus(bAktual.toDouble()))?.div(bAktual.toDouble()))?.times(100)
                 val lambAcc = ((lamb?.minus(bAktual.toDouble()))?.div(bAktual.toDouble()))?.times(100)
                 val djagraAcc = ((djagra?.minus(bAktual.toDouble()))?.div(bAktual.toDouble()))?.times(100)
-                val neuralAcc = ((dnrOutput1?.minus(bAktual.toDouble()))?.div(bAktual.toDouble()))?.times(100)
+                val neuralAcc = ((dnrOutput2?.minus(bAktual.toDouble()))?.div(bAktual.toDouble()))?.times(100)
 
                 binding.schoorlvalue.text = "${re.replace("${df2.format(schAcc)}", "")}%"
                 binding.schoorlIDvalue.text = "${re.replace("${df2.format(schIDAcc)}", "")}%"
@@ -169,12 +169,12 @@ class AccuracyFragment : Fragment() {
                             "${ldData} Cm",
                             "${pbData} Cm",
                             "${bobot} Kg",
-                            "${re.replace("${df.format(schAcc)}", "")}%",
-                            "${re.replace("${df.format(schIDAcc)}", "")}%",
-                            "${re.replace("${df.format(wEurAcc)}", "")}%",
-                            "${re.replace("${df.format(wIDAcc)}", "")}%",
-                            "${re.replace("${df.format(lambAcc)}", "")}%",
-                            "${re.replace("${df.format(djagraAcc)}", "")}%",
+                            "${re.replace("${df2.format(schAcc)}", "")}%",
+                            "${re.replace("${df2.format(schIDAcc)}", "")}%",
+                            "${re.replace("${df2.format(wEurAcc)}", "")}%",
+                            "${re.replace("${df2.format(wIDAcc)}", "")}%",
+                            "${re.replace("${df2.format(lambAcc)}", "")}%",
+                            "${re.replace("${df2.format(djagraAcc)}", "")}%",
                             "${re.replace("${df2.format(neuralAcc)}", "")}%",
                             "${formatted}",
 
@@ -184,13 +184,6 @@ class AccuracyFragment : Fragment() {
                 }
 
             }
-
-
-
-
-
-
-
 
 
         }

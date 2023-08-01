@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/homeFragment" android:title="Home"  android:icon="@drawable/home_icon2"/>
-    <item android:id="@+id/optionFragment" android:title="Option"  android:icon="@drawable/new_settings"/>
-    <item android:id="@+id/aboutFragment" android:title="About" android:icon="@drawable/about_icon2" />
+    <item android:id="@+id/homeFragment" android:title="Beranda"  android:icon="@drawable/home_icon2"/>
+    <item android:id="@+id/optionFragment" android:title="Pengaturan"  android:icon="@drawable/new_settings"/>
+    <item android:id="@+id/aboutFragment" android:title="Tentang" android:icon="@drawable/about_icon2" />
 </menu>

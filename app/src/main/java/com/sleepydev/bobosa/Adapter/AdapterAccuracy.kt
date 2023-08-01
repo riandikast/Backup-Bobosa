@@ -47,9 +47,9 @@ data class AdapterAccuracy (var listAcc: List<Accuracy>): RecyclerView.Adapter<A
             accBinding.datapanjangbadan.text = listAcc[position].panjang_badan
             accBinding.bbvalue.text = listAcc[position].bobot_badan
             accBinding.schoorlvalue.text = listAcc[position].sch
-            accBinding.schoorlIDvalue.text = listAcc[position].schID
+            accBinding.schoorlIDvalue.text = listAcc[position].sch_id
             accBinding.wintervalue.text = listAcc[position].winter
-            accBinding.winterIDvalue.text = listAcc[position].wID
+            accBinding.winterIDvalue.text = listAcc[position].winter_id
             accBinding.lambournevalue.text = listAcc[position].lamb
             accBinding.djagravalue.text = listAcc[position].djagra
             accBinding.neuralvalue.text = listAcc[position].neural_network

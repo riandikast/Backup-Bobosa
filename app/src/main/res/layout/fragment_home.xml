@@ -196,7 +196,7 @@
                         <androidx.cardview.widget.CardView
                             android:id="@+id/card_history"
                             android:layout_marginVertical="12dp"
-                            android:layout_width="220dp"
+                            android:layout_width="240dp"
                             android:backgroundTint="@color/blue"
                             android:layout_marginStart="25dp"
                             app:cardCornerRadius="10dp"
@@ -241,7 +241,7 @@
                         <androidx.cardview.widget.CardView
                             android:id="@+id/card_akurasi"
                             android:layout_marginVertical="12dp"
-                            android:layout_width="220dp"
+                            android:layout_width="240dp"
                             android:backgroundTint="@color/blue"
                             android:layout_marginStart="25dp"
                             app:cardCornerRadius="10dp"
@@ -285,7 +285,7 @@
                         <androidx.cardview.widget.CardView
                             android:id="@+id/card_batch"
                             android:layout_marginVertical="12dp"
-                            android:layout_width="220dp"
+                            android:layout_width="240dp"
                             android:backgroundTint="@color/blue"
                             android:layout_marginHorizontal="25dp"
                             app:cardCornerRadius="10dp"
@@ -310,7 +310,7 @@
 
 
                                 <TextView
-                                    android:text="Batch Estimasi"
+                                    android:text="Estimasi Tunggal"
                                     android:textSize="18sp"
                                     android:gravity="center_vertical"
                                     android:textColor="@color/white"

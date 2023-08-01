@@ -6,7 +6,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
 
-@Entity(tableName = "backup_time")
+@Entity(tableName = "waktu_backup")
 @Parcelize
 data class BackupTime(
     @PrimaryKey

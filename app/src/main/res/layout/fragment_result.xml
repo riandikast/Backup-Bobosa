@@ -550,7 +550,7 @@
                 android:id="@+id/btnback"
                 android:backgroundTint="@color/blue"
                 android:textColor="@color/white"
-                android:text="Kembali ke Home"
+                android:text="Kembali ke Beranda"
                 android:layout_width="match_parent"
                 android:layout_height="50dp">
 

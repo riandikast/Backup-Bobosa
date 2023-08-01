@@ -11,17 +11,17 @@ interface HistoryDao {
     @Insert
     fun insertHistory(history: History) :Long
 
-    @Query("SELECT *  FROM History")
+    @Query("SELECT *  FROM riwayat")
     fun getAllHistory(): List<History>
 
-    @Query("DELETE FROM History")
+    @Query("DELETE FROM riwayat")
     fun deleteHistory():Void
 
     @Insert
     fun insertBackupTime(backup: BackupTime) :Long
-    @Query("DELETE FROM backup_time")
+    @Query("DELETE FROM waktu_backup")
     fun deleteBackupTime() :Int
 
-    @Query("SELECT *  FROM backup_time")
+    @Query("SELECT *  FROM waktu_backup")
     fun getBackupTime():BackupTime
 }

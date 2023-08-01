@@ -88,7 +88,7 @@ class ResultFragment : Fragment() {
         val getJenis = binding.jenissapi.text.toString()
 
         if (getJenis == "Peranakan Ongole (PO)") {
-            val rec = "Berdasarkan hasil observasi, untuk sapi jenis Peranakan Ongole (PO) disarankan menggunakan pendekatan rumus Winter Eropa \n"
+            val rec = "Berdasarkan hasil observasi, untuk sapi jenis Peranakan Ongole (PO) disarankan menggunakan pendekatan rumus Djagra \n"
 //            binding.starsarjo.visibility = View.VISIBLE
 //            binding.wintertitle.setTextColor(Color.parseColor("#ffca3a"))
             binding.rekomenval.text = rec
@@ -97,7 +97,7 @@ class ResultFragment : Fragment() {
         }
 
         if (getJenis == "Kupang") {
-            val rec = "Berdasarkan hasil observasi, untuk sapi jenis Kupang disarankan menggunakan pendekatan rumus Winter Eropa \n"
+            val rec = "Berdasarkan hasil observasi, untuk sapi jenis Kupang disarankan menggunakan pendekatan rumus Djagra \n"
 //            binding.starswid.visibility = View.VISIBLE
 //            binding.wintertitle.setTextColor(Color.parseColor("#ffca3a"))
             binding.rekomenval.text = rec
@@ -114,7 +114,7 @@ class ResultFragment : Fragment() {
         }
 
         if (getJenis == "-") {
-            val rec = "Masukan jenis sapi untuk mendapatkan rekomendasi rumus dari sistem \n"
+            val rec = "Masukan jenis sapi untuk mendapatkan rekomendasi penggunaan rumus dari sistem \n"
             binding.rekomenval.text = rec
             rekomendasi = rec
 
@@ -172,7 +172,7 @@ class ResultFragment : Fragment() {
         binding.winterIDvalue.text = "${df2.format(wID)} Kg"
         binding.lambournevalue.text = "${df2.format(lamb)} Kg"
         binding.djagravalue.text = "${df2.format(djagra)} Kg"
-        binding.neuralvalue.text = "${df2.format(dnrOutput1)} Kg"
+        binding.neuralvalue.text = "${df2.format(dnrOutput2)} Kg"
 
         val current = LocalDateTime.now()
         val formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)
@@ -192,7 +192,7 @@ class ResultFragment : Fragment() {
                     "${df2.format(wID)} Kg",
                     "${df2.format(lamb)} Kg",
                     "${df2.format(djagra)} Kg",
-                    "${df2.format(dnrOutput1)} Kg",
+                    "${df2.format(dnrOutput2)} Kg",
                     "$formatted",
                     "$rekomendasi"
                 )

@@ -53,7 +53,7 @@ data class AdapterHistory(var listHis: List<History>):RecyclerView.Adapter<Adapt
             historyBinding.schoorlIDvalue.text =  listHis[position].schoorl_ind
             historyBinding.wintervalue.text =  listHis[position].winter_eropa
             historyBinding.winterIDvalue.text = listHis[position].winter_indonesia
-            historyBinding.lambournevalue.text = listHis[position].arjo
+            historyBinding.lambournevalue.text = listHis[position].lamb
             historyBinding.djagravalue.text = listHis[position].djagra
             historyBinding.neuralvalue.text = listHis[position].neural_network
             historyBinding.rekomenval.text = "${listHis[position].rec} \n"

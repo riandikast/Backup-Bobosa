@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() {
             mainBinding.apptitle.text = "Hasil"
         }
         if (navDest==R.id.homeFragment){
-            mainBinding.apptitle.text = "Home"
+            mainBinding.apptitle.text = "Beranda"
         }
 
         if (navDest==R.id.historyFragment){
@@ -116,15 +116,15 @@ class MainActivity : AppCompatActivity() {
         }
 
         if (navDest==R.id.batchFragment){
-            mainBinding.apptitle.text = "Batch"
+            mainBinding.apptitle.text = "Estimasi Tunggal"
         }
 
         if (navDest==R.id.aboutFragment){
-            mainBinding.apptitle.text = "About"
+            mainBinding.apptitle.text = "Tentang"
         }
 
         if (navDest==R.id.optionFragment){
-            mainBinding.apptitle.text = "Option"
+            mainBinding.apptitle.text = "Pengaturan"
         }
 
 
