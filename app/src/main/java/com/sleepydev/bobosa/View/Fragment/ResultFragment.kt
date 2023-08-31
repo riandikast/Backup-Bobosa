@@ -126,13 +126,13 @@ class ResultFragment : Fragment() {
 
         val df2 = DecimalFormat("#.###")
         df2.roundingMode = RoundingMode.CEILING
-        val formattedLDInch = (df2.format(ldInch)).toDouble()
-        val formattedPBInch = (df2.format(pbInch)).toDouble()
+//        val formattedLDInch = (df2.format(ldInch)).toDouble()
+//        val formattedPBInch = (df2.format(pbInch)).toDouble()
 
         val sch =
-            ((getLd?.toInt()?.plus(22))?.times((getLd?.toInt()?.plus(22)!!)))?.toDouble()?.div(100)
+            ((getLd?.toDouble()?.plus(22))?.times((getLd?.toDouble()?.plus(22)!!)))?.toDouble()?.div(100)
         val schID =
-            ((getLd?.toInt()?.plus(18))?.times((getLd?.toInt()?.plus(18)!!)))?.toDouble()?.div(100)
+            ((getLd?.toDouble()?.plus(18))?.times((getLd?.toDouble()?.plus(18)!!)))?.toDouble()?.div(100)
         val wEurope = ((ldInch?.times(ldInch))?.times(pbInch!!))?.div(300)
         val wEuropeToKg = wEurope?.div(2.205)
         val wID =

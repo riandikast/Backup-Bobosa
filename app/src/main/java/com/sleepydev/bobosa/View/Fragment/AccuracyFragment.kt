@@ -106,9 +106,9 @@ class AccuracyFragment : Fragment() {
                 val ldInch = ldData?.toDouble()?.div(2.54)
                 val pbInch = pbData?.toDouble()?.div(2.54)
                 val sch =
-                    ((ldData?.toInt()?.plus(22))?.times((ldData?.toInt()?.plus(22)!!)))?.toDouble()?.div(100)
+                    ((ldData?.toDouble()?.plus(22))?.times((ldData?.toDouble()?.plus(22)!!)))?.toDouble()?.div(100)
                 val schID =
-                    ((ldData?.toInt()?.plus(18))?.times((ldData?.toInt()?.plus(18)!!)))?.toDouble()?.div(100)
+                    ((ldData?.toDouble()?.plus(18))?.times((ldData?.toDouble()?.plus(18)!!)))?.toDouble()?.div(100)
                 val wEurope = ((ldInch?.times(ldInch))?.times(pbInch!!))?.div(300)
                 val wEuropeToKg = wEurope?.div(2.205)
                 val wID =

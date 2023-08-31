@@ -33,8 +33,8 @@
                 android:id="@+id/inputlingkardada"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:inputType="number"
-                android:maxLength="3"
+                android:inputType="numberDecimal"
+
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/rectangle_white_edit_text"
@@ -48,8 +48,8 @@
                 android:id="@+id/inputpanjangbadan"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:maxLength="3"
-                android:inputType="number"
+
+                android:inputType="numberDecimal"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="20dp"
                 android:textColorHint="@color/white"

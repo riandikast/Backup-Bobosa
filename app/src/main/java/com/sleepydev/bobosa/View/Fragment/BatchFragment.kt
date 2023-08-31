@@ -82,8 +82,8 @@ class BatchFragment : Fragment() {
         
         binding.btnhitung.setOnClickListener {
 
-            val ld = binding.inputlingkardada.text.toString()
-            val pb = binding.inputpanjangbadan.text.toString()
+//            val ld = binding.inputlingkardada.text.toString()
+//            val pb = binding.inputpanjangbadan.text.toString()
 
             
             val ldData = binding.inputlingkardada.text.toString().trim()
@@ -118,9 +118,9 @@ class BatchFragment : Fragment() {
                 val df2 = DecimalFormat("#.###")
                 df2.roundingMode = RoundingMode.CEILING
                 val sch =
-                    ((ldData?.toInt()?.plus(22))?.times((ldData?.toInt()?.plus(22)!!)))?.toDouble()?.div(100)
+                    ((ldData?.toDouble()?.plus(22))?.times((ldData?.toDouble()?.plus(22)!!)))?.toDouble()?.div(100)
                 val schID =
-                    ((ldData?.toInt()?.plus(18))?.times((ldData?.toInt()?.plus(18)!!)))?.toDouble()?.div(100)
+                    ((ldData?.toDouble()?.plus(18))?.times((ldData?.toDouble()?.plus(18)!!)))?.toDouble()?.div(100)
                 val wEurope = ((ldInch?.times(ldInch))?.times(pbInch!!))?.div(300)
                 val wEuropeToKg = wEurope?.div(2.205)
                 val wID =
